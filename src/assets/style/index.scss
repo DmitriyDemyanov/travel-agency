@@ -1,0 +1,31 @@
+@import '_fonts.scss';
+@import '_variables.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+html body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--main-color-dark);
+}
+
+.title-ff {
+  font-family: 'TradeGothic', sans-serif;
+}
+.font-color-7 {
+  opacity: 0.7;
+}
+.font-color-5 {
+  opacity: 0.5;
+}
+.font-color-4 {
+  opacity: 0.4;
+}
+// _______________________________________________Font-size
+
+.fz-14 {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
