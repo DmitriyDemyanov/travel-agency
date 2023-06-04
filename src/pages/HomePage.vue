@@ -7,18 +7,32 @@
       </template>
 
     </MainButtonComponent>
+    <div class="wrapper-test">
+      <MainInputComponent>
+        <template #append>
+          <img src="@/assets/image/icons/arrows-right&left.svg" alt="arrows">
+        </template>
+      </MainInputComponent>
+    </div>
+
   </div>
 </template>
 
 <script>
 import MainButtonComponent from '@/components/MainButtonComponent.vue';
-
+import MainInputComponent from '@/components/MainInputComponent';
 export default {
   name: 'HomePage',
   components: {
     MainButtonComponent,
+    MainInputComponent,
   }
 }
 </script>
 
-<style lang='scss' scoped></style>
+<style lang='scss' scoped>
+.wrapper-test {
+  margin: 30px;
+  width: 30%;
+}
+</style>
