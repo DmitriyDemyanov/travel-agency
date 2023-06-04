@@ -3,12 +3,25 @@
 
 * {
   box-sizing: border-box;
+  
 }
 
-html body {
+  body {
   font-family: 'Montserrat', sans-serif;
-  color: var(--main-color-dark);
+  color: var(--main-color-dark); 
 }
+html h1 {
+    margin: 0;
+  }
+html h2 {
+    margin: 0;
+  }
+  html h3 {
+    margin: 0;
+  }
+  html p {
+    margin: 0;
+  }
 
 .title-ff {
   font-family: 'TradeGothic', sans-serif;
@@ -33,4 +46,18 @@ html body {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+}
+.fz-20 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+// _______________________________________________Font-size ---TradeGothic LT Extended
+
+.fz-accent-45 {
+  font-family: "TradeGothic LT Extended" ;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 57px;
 }

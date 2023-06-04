@@ -1,38 +1,146 @@
 <template>
-  <div>
-    <h1>Hello World</h1>
-    <MainButtonComponent title='hello' color='light' type='bordered'>
-      <template #prepend>
-        <img src="@/assets/image/icons/icon-send.svg" alt="Send">
-      </template>
+  <section>
+    <div class="content-header">
+      <div class="wrapper-header">
+        <div class="wrapper-navigation d-flex justify-content-between align-items-center">
+          <div class="wrapper-service d-flex">
 
-    </MainButtonComponent>
-    <div class="wrapper-test">
-      <MainInputComponent>
-        <template #append>
-          <img src="@/assets/image/icons/arrows-right&left.svg" alt="arrows">
-        </template>
-      </MainInputComponent>
+            <div class="item-flight d-flex">
+              <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.74733 19.75H7.49952C7.37414 19.75 7.25077 19.7185 7.14069 19.6585C7.03062 19.5984 6.93735 19.5118 6.86941 19.4064C6.80147 19.301 6.76104 19.1803 6.7518 19.0552C6.74257 18.9302 6.76483 18.8048 6.81655 18.6906L9.83811 12.0227L5.30108 11.9219L3.64639 13.9267C3.33092 14.3233 3.07921 14.5 2.43702 14.5H1.59702C1.46402 14.5043 1.33195 14.4764 1.212 14.4188C1.09205 14.3612 0.987757 14.2755 0.907956 14.1691C0.796393 14.0186 0.686706 13.7636 0.793581 13.3998L1.72264 10.0717C1.72967 10.0469 1.73811 10.022 1.74749 9.99766C1.74795 9.99534 1.74795 9.99295 1.74749 9.99063C1.73781 9.96627 1.72951 9.94139 1.72264 9.91609L0.792643 6.56687C0.691862 6.21016 0.802018 5.96078 0.912643 5.81406C0.986929 5.71549 1.08331 5.63573 1.19403 5.58118C1.30475 5.52664 1.42672 5.49883 1.55014 5.5H2.43702C2.91655 5.5 3.38202 5.71516 3.65577 6.0625L5.27624 8.03359L9.83811 7.96609L6.81749 1.30984C6.7657 1.19568 6.74335 1.07036 6.75249 0.945327C6.76163 0.820298 6.80196 0.699555 6.8698 0.594135C6.93764 0.488715 7.03082 0.401982 7.14083 0.341864C7.25083 0.281747 7.37416 0.250163 7.49952 0.25H8.76092C8.9369 0.253536 9.10983 0.29667 9.26685 0.376197C9.42388 0.455724 9.56097 0.569602 9.66796 0.709375L15.5297 7.83438L18.2376 7.76312C18.4359 7.75234 18.9853 7.74859 19.1123 7.74859C21.7026 7.75 23.2495 8.59094 23.2495 10C23.2495 10.4434 23.0723 11.2656 21.8869 11.7887C21.187 12.0981 20.2533 12.2547 19.1114 12.2547C18.9858 12.2547 18.4378 12.2509 18.2367 12.2402L15.5292 12.168L9.65296 19.293C9.54588 19.4321 9.40891 19.5454 9.25216 19.6246C9.0954 19.7037 8.92288 19.7465 8.74733 19.75Z"
+                  fill="white" />
+              </svg>
+              <div class="item-text fz-14">Find Flight</div>
+            </div>
+            <div class="item-hotel d-flex">
+              <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.25 7.81406C18.7772 7.60651 18.2664 7.49955 17.75 7.5H4.25C3.73368 7.4995 3.22288 7.60629 2.75 7.81359C2.08166 8.10587 1.51294 8.58652 1.11336 9.1968C0.713775 9.80707 0.500639 10.5205 0.5 11.25V16.5C0.5 16.6989 0.579018 16.8897 0.71967 17.0303C0.860322 17.171 1.05109 17.25 1.25 17.25C1.44891 17.25 1.63968 17.171 1.78033 17.0303C1.92098 16.8897 2 16.6989 2 16.5V16.125C2.00122 16.0259 2.04112 15.9312 2.11118 15.8612C2.18124 15.7911 2.27592 15.7512 2.375 15.75H19.625C19.7241 15.7512 19.8188 15.7911 19.8888 15.8612C19.9589 15.9312 19.9988 16.0259 20 16.125V16.5C20 16.6989 20.079 16.8897 20.2197 17.0303C20.3603 17.171 20.5511 17.25 20.75 17.25C20.9489 17.25 21.1397 17.171 21.2803 17.0303C21.421 16.8897 21.5 16.6989 21.5 16.5V11.25C21.4993 10.5206 21.2861 9.80726 20.8865 9.19707C20.4869 8.58688 19.9183 8.1063 19.25 7.81406ZM16.625 0.75H5.375C4.67881 0.75 4.01113 1.02656 3.51884 1.51884C3.02656 2.01113 2.75 2.67881 2.75 3.375V6.75C2.75002 6.77906 2.75679 6.80771 2.76979 6.8337C2.78278 6.85969 2.80163 6.8823 2.82486 6.89976C2.84809 6.91721 2.87505 6.92903 2.90363 6.93428C2.93221 6.93953 2.96162 6.93806 2.98953 6.93C3.39896 6.81025 3.82341 6.74964 4.25 6.75H4.44828C4.49456 6.75029 4.53932 6.73346 4.57393 6.70274C4.60855 6.67202 4.63058 6.62958 4.63578 6.58359C4.67669 6.21712 4.85115 5.87856 5.12586 5.63256C5.40056 5.38656 5.75625 5.25037 6.125 5.25H8.75C9.11899 5.25003 9.47503 5.38606 9.75002 5.63209C10.025 5.87812 10.1997 6.21688 10.2406 6.58359C10.2458 6.62958 10.2679 6.67202 10.3025 6.70274C10.3371 6.73346 10.3818 6.75029 10.4281 6.75H11.5747C11.621 6.75029 11.6657 6.73346 11.7003 6.70274C11.735 6.67202 11.757 6.62958 11.7622 6.58359C11.8031 6.21736 11.9773 5.87899 12.2517 5.63303C12.5261 5.38707 12.8815 5.25072 13.25 5.25H15.875C16.244 5.25003 16.6 5.38606 16.875 5.63209C17.15 5.87812 17.3247 6.21688 17.3656 6.58359C17.3708 6.62958 17.3929 6.67202 17.4275 6.70274C17.4621 6.73346 17.5068 6.75029 17.5531 6.75H17.75C18.1766 6.74979 18.6011 6.81057 19.0105 6.93047C19.0384 6.93854 19.0679 6.94 19.0965 6.93473C19.1251 6.92945 19.1521 6.91759 19.1753 6.90009C19.1986 6.88258 19.2174 6.8599 19.2304 6.83385C19.2433 6.8078 19.2501 6.7791 19.25 6.75V3.375C19.25 2.67881 18.9734 2.01113 18.4812 1.51884C17.9889 1.02656 17.3212 0.75 16.625 0.75Z"
+                  fill="white" />
+              </svg>
+              <div class="item-text fz-14">Find Stays</div>
+            </div>
+          </div>
+          <div class="logo-home">
+            <img src="@/assets/image/icons/logo-light.svg" alt="logo">
+          </div>
+          <div class="wrapper-login d-flex align-items-center">
+            <div class="item-login fz-14">Login</div>
+            <div class="item-btn">
+              <MainButtonComponent title='Sign up' color='light' />
+            </div>
+          </div>
+        </div>
+        <h2 class="subtitle-header fz-accent-45">Helping Others</h2>
+        <h1 class="title-header">Live & Travel</h1>
+        <p class="text-header fz-20">Special offers to suit your plan</p>
+      </div>
     </div>
-
-  </div>
+  </section>
 </template>
 
 <script>
-import MainButtonComponent from '@/components/MainButtonComponent.vue';
-import MainInputComponent from '@/components/MainInputComponent';
+
+import MainButtonComponent from "@/components/MainButtonComponent";
 export default {
   name: 'HomePage',
   components: {
     MainButtonComponent,
-    MainInputComponent,
   }
 }
 </script>
 
 <style lang='scss' scoped>
-.wrapper-test {
-  margin: 30px;
-  width: 30%;
+.content-header {
+  margin: 30px 30px 0 30px;
+}
+
+.wrapper-header {
+  padding: 24px 32px 0 32px;
+  width: 100%;
+  height: 620px;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%), url('@/assets/image/photo/bg-home-header.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 60%;
+  border-radius: 24px;
+  color: #fff;
+
+}
+
+.item-flight {
+  margin-right: 23px;
+  cursor: pointer;
+
+  &:hover {
+    .item-text {
+      color: var(--accent-color);
+      transition: all 0.4s;
+    }
+
+    svg {
+      path {
+        transition: all 0.4s;
+        fill: var(--accent-color);
+      }
+    }
+  }
+}
+
+.item-hotel {
+  cursor: pointer;
+
+  &:hover {
+    .item-text {
+      color: var(--accent-color);
+      transition: all 0.4s;
+    }
+
+    svg {
+      path {
+        transition: all 0.4s;
+        fill: var(--accent-color);
+      }
+    }
+  }
+}
+
+.item-text {
+  font-weight: 600;
+  padding: 0 10px 0 5px;
+}
+
+.item-login {
+  font-weight: 600;
+  padding: 10px;
+  margin-right: 22px;
+}
+
+.subtitle-header {
+  margin-top: 84px;
+  text-align: center;
+  font-family: "TradeGothic LT Extended";
+  line-height: 57px;
+  font-weight: 700;
+}
+
+.title-header {
+  margin-top: 4px;
+  font-family: 'TradeGothic LT Extended';
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 101px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.text-header {
+  margin-top: 16px;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
 }
 </style>

@@ -1,12 +1,10 @@
 <template>
-  <BContainer>
+  <section>
+    <!-- <router-link class="p-2" to="/">Главная</router-link>  -->
 
-    <div class="mb-3 mt-3">
-      <router-link class="p-2" to="/">Главная</router-link>
 
-    </div>
     <router-view class="main-view"></router-view>
-  </BContainer>
+  </section>
 </template>
 
 <script>
@@ -17,4 +15,9 @@ export default {
 
 <style>
 @import "@/assets/style/index.scss";
+
+.container-normal{
+  width: 1232px;
+  margin: 0 auto;
+}
 </style>

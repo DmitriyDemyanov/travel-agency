@@ -70,6 +70,10 @@ export default {
 
 .color-light {
   background-color: #fff;
+
+  &:hover {
+    background-color: var(--accent-color);
+  }
 }
 
 .color-dark {
