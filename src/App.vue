@@ -1,14 +1,14 @@
 <template>
   <section>
-    <div class="wrapper-header" >
-      <HeaderComponent />
-    </div>
+
+    <HeaderComponent />
+
 
     <!-- <router-link class="p-2" to="/">Главная</router-link>  -->
 
 
     <router-view class="main-view"></router-view>
-    <div class="test-footer"></div>
+    <FooterComponent />
   </section>
 </template>
 
@@ -16,12 +16,14 @@
 
 
 import HeaderComponent from '@/components/HeaderComponent';
+import FooterComponent from '@/components/FooterComponent';
 export default {
   name: 'App',
   components: {
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent,
   },
-  
+
 }
 </script>
 
@@ -31,9 +33,5 @@ export default {
 .container-normal {
   width: 1232px;
   margin: 0 auto;
-}
-
-.test-footer {
-  height: 500px;
 }
 </style>

@@ -27,6 +27,7 @@ export default {
 
 .wrapper-header {
   padding: 24px 32px 0 32px;
+  margin-bottom: 183px;
   width: 100%;
   height: 620px;
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%), url('@/assets/image/photo/bg-home-header.png');
