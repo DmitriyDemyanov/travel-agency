@@ -5,60 +5,50 @@
         <a href="#"><img src="@/assets/image/icons/logo-dark.svg" alt="logo"></a>
         <div class="social-links">
           <div class="social-icon d-flex">
-            <a href="https://facebook.com" target="_blank"> <img src="@/assets/image/icons/social-facebook.svg"
-                alt="icon"></a>
-            <a href="https://twitter.com" target="_blank"> <img src="@/assets/image/icons/social-twitter.svg"
-                alt="icon"></a>
-            <a href="https://youtube.com" target="_blank"> <img src="@/assets/image/icons/social-youtube.svg"
-                alt="icon"></a>
-            <a href="https://instagram.com" target="_blank"> <img src="@/assets/image/icons/social-instagram.svg"
-                alt="icon"></a>
+            <a :href="el.link" target="_blank" v-for="(el,ind) in getSocialMedia" :key='ind'>
+              <img :src="require(`@/assets/image/icons/social-${el.icon}.svg`)" alt="icon">
+            </a>
+
           </div>
         </div>
       </div>
       <div class="items-content">
-        <div class="title title-ff fz-16">Our Destinations</div>
-        <a class="font-color-7 fz-14" href="#">Canada</a>
-        <a href="#">Alaska</a>
-        <a href="#">France</a>
-        <a href="#">Iceland</a>
+        <div class="title-footer title-ff fz-16">Our Destinations</div>
+        <div class="subtitle-footer font-color-7  fz-14" v-for="(el,ind) in getOurDestinations" :key='ind'>{{ el.title }}
+        </div>
+
       </div>
       <div class="items-content">
-        <div class="title">Our Activities</div>
-        <a href="#">Canada</a>
-        <a href="#">Alaska</a>
-        <a href="#">France</a>
-        <a href="#">Iceland</a>
+        <div class="title-footer  title-ff fz-16">Our Activities</div>
+        <div class="subtitle-footer font-color-7  fz-14" v-for="(el,ind) in getOurActivities" :key='ind'>{{ el.title }}
+        </div>
       </div>
       <div class="items-content">
-        <div class="title">Travel Blogs</div>
-        <a href="#">Canada</a>
-        <a href="#">Alaska</a>
-        <a href="#">France</a>
-        <a href="#">Iceland</a>
+        <div class="title-footer  title-ff fz-16">Travel Blogs</div>
+        <div class="subtitle-footer font-color-7  fz-14" v-for="(el,ind) in getTravelBlogs" :key='ind'>{{ el.title }}
+        </div>
       </div>
       <div class="items-content">
-        <div class="title">About Us</div>
-        <a href="#">Canada</a>
-        <a href="#">Alaska</a>
-        <a href="#">France</a>
-        <a href="#">Iceland</a>
+        <div class="title-footer  title-ff fz-16">About Us</div>
+        <a class="subtitle-footer font-color-7  fz-14" :href="el.link" v-for="(el,ind) in getAboutUs" :key='ind'>{{
+          el.title }}</a>
       </div>
       <div class="items-content">
-        <div class="title">Contact Us</div>
-        <a href="#">Canada</a>
-        <a href="#">Alaska</a>
-        <a href="#">France</a>
-        <a href="#">Iceland</a>
+        <div class="title-footer  title-ff fz-16">Contact Us</div>
+        <a class="subtitle-footer font-color-7  fz-14" :href="el.link" v-for="(el,ind) in getAboutUs" :key='ind'>{{
+          el.title }}</a>
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
   name: 'FooterComponent',
-
+  computed: {
+    ...mapGetters('flight',['getSocialMedia','getAboutUs','getOurDestinations','getOurActivities','getTravelBlogs'])
+  }
 }
 </script>
 
@@ -66,14 +56,14 @@ export default {
 .bg-footer {
   position: relative;
   width: 100%;
-  height: 573px;
+  min-height: 573px;
   background: linear-gradient(to bottom, #fff, #fff 26%, var(--brand-color) 26%, var(--brand-color) 100%);
   padding-top: 370px;
 }
 
 .wrapper-content {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 175px 175px 175px 175px 175px;
   column-gap: 24px;
 }
 
@@ -95,5 +85,13 @@ export default {
     color: var(--main-color-font);
 
   }
+}
+
+.title-footer {
+  margin-bottom: 16px;
+}
+
+.subtitle-footer {
+  padding: 6px 0;
 }
 </style>
