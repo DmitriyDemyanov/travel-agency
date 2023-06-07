@@ -1,7 +1,8 @@
 <template>
   <section class="wrapper-input">
     <label class="label-input fz-14" for="main-input">{{ labelText }}</label>
-    <input class="main-input fz-16" type="text" name="main-input" :placeholder="`${placeholderTest}`">
+    <input :class='`type-${type}`' class="main-input  fz-16" type="text" name="main-input"
+      :placeholder="`${placeholder}`">
     <div class="append-slot" @click="onClickIcon">
       <slot name="append"></slot>
     </div>
@@ -14,11 +15,15 @@ export default {
   props: {
     labelText: {
       type: String,
-      default: 'test',
+      default: '',
     },
-    placeholderTest: {
+    placeholder: {
       type: String,
-      default: 'test-placeholder',
+      default: '',
+    },
+    type: {
+      type: String,
+      default: '',
     }
   },
   methods: {
@@ -66,5 +71,9 @@ export default {
   top: 50%;
   transform: translateY(-50%);
   right: 17px;
+}
+
+.type-no-bordered {
+  border: none;
 }
 </style>

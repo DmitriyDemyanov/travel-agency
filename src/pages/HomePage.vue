@@ -37,16 +37,19 @@
         <p class="text-header fz-20">Special offers to suit your plan</p>
       </div>
     </div>
+    <SiteSubscribeComponent/>
   </section>
 </template>
 
 <script>
 
 import MainButtonComponent from "@/components/MainButtonComponent";
+import SiteSubscribeComponent from "@/components/SiteSubscribeComponent";
 export default {
   name: 'HomePage',
   components: {
     MainButtonComponent,
+    SiteSubscribeComponent,
   }
 }
 </script>
