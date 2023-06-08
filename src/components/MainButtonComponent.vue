@@ -55,6 +55,17 @@ export default {
     }
   }
 
+  &.type-transparent {
+    background-color: transparent;
+    color: #fff;
+    font-weight: 700;
+    transition: all 0.3s;
+
+    &:hover {
+      color: var(--accent-color);
+    }
+  }
+
   .prepend-icon {
     padding-left: 5px;
   }
