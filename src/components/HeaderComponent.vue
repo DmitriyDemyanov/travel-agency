@@ -21,14 +21,18 @@
         </div>
       </div>
       <div class="logo-home">
-        <img src="@/assets/image/icons/logo-light.svg" alt="logo">
+        <a v-if="isSticked" href="#"><img src="@/assets/image/icons/logo-brand.svg" alt="logo"></a>
+
+        <a v-else href="#"><img src="@/assets/image/icons/logo-light.svg" alt="logo"></a>
+
+
       </div>
       <div class="wrapper-login d-flex align-items-center">
         <div class="item-login">
-          <MainButtonComponent title='Login' type='transparent' />
+          <MainButtonComponent title='Login' :type='colorBtnLogin' />
         </div>
         <div class="item-btn">
-          <MainButtonComponent title='Sign up' color='light' />
+          <MainButtonComponent title='Sign up' :color='colorBtnSignUp' />
         </div>
       </div>
     </div>
@@ -45,6 +49,14 @@ export default {
   data() {
     return {
       isSticked: false
+    }
+  },
+  computed: {
+    colorBtnSignUp() {
+      return this.isSticked ? 'dark' : 'light'
+    },
+    colorBtnLogin() {
+      return this.isSticked ? 'revers-transparent' : 'transparent'
     }
   },
   created() {
@@ -64,13 +76,23 @@ export default {
 <style lang='scss' scoped>
 .wrapper-navigation {
   position: fixed;
+  z-index: 10;
   width: 100%;
   height: 90px;
   padding: 0 62px;
   color: #fff;
 
   &.sticked {
-    color: brown;
+    color: var(--main-color-font);
+    background-color: #fff;
+    box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.05);
+
+    svg {
+      path {
+        transition: all 0.4s;
+        fill: var(--main-color-font);
+      }
+    }
   }
 }
 

@@ -14,19 +14,22 @@
       </div>
       <div class="items-content">
         <div class="title-footer title-ff fz-16">Our Destinations</div>
-        <div class="subtitle-footer font-color-7  fz-14" v-for="(el,ind) in getOurDestinations" :key='ind'>{{ el.title }}
-        </div>
+        <a href="#" class="subtitle-footer font-color-7  fz-14" v-for="(el,ind) in getOurDestinations" :key='ind'>{{
+          el.title }}
+        </a>
 
       </div>
       <div class="items-content">
         <div class="title-footer  title-ff fz-16">Our Activities</div>
-        <div class="subtitle-footer font-color-7  fz-14" v-for="(el,ind) in getOurActivities" :key='ind'>{{ el.title }}
-        </div>
+        <a href="#" class="subtitle-footer font-color-7  fz-14" v-for="(el,ind) in getOurActivities" :key='ind'>{{
+          el.title }}
+        </a>
       </div>
       <div class="items-content">
         <div class="title-footer  title-ff fz-16">Travel Blogs</div>
-        <div class="subtitle-footer font-color-7  fz-14" v-for="(el,ind) in getTravelBlogs" :key='ind'>{{ el.title }}
-        </div>
+        <a href="#" class="subtitle-footer font-color-7  fz-14" v-for="(el,ind) in getTravelBlogs" :key='ind'>{{ el.title
+        }}
+        </a>
       </div>
       <div class="items-content">
         <div class="title-footer  title-ff fz-16">About Us</div>
@@ -62,7 +65,7 @@ export default {
   position: relative;
   width: 100%;
   min-height: 573px;
-  background: linear-gradient(to bottom, #fff, #fff 26%, var(--brand-color) 26%, var(--brand-color) 100%);
+  background: linear-gradient(to bottom, #FAFBFC, #FAFBFC 26%, var(--brand-color) 26%, var(--brand-color) 100%);
   padding-top: 370px;
 }
 
@@ -78,6 +81,13 @@ export default {
   a {
     padding: 4px 6px 6px 0;
     margin-right: 6px;
+
+    img {
+      &:hover {
+        background-color: var(--accent-color);
+      }
+    }
+
   }
 }
 
@@ -88,7 +98,11 @@ export default {
   a {
     text-decoration: none;
     color: var(--main-color-font);
+    transition: all 0.3s;
 
+    &:hover {
+      color: var(--accent-color);
+    }
   }
 }
 

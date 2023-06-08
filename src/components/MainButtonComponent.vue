@@ -65,6 +65,16 @@ export default {
       color: var(--accent-color);
     }
   }
+   &.type-revers-transparent {
+    background-color: transparent;
+    color: var(--main-color-font);
+    font-weight: 700;
+    transition: all 0.3s;
+
+    &:hover {
+      color: var(--accent-color);
+    }
+  }
 
   .prepend-icon {
     padding-left: 5px;
@@ -89,5 +99,10 @@ export default {
 
 .color-dark {
   background-color: var(--main-color-font);
+  color: #fff;
+
+  &:hover {
+    background-color: var(--accent-color);
+  }
 }
 </style>
