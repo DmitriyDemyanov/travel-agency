@@ -5,10 +5,10 @@
   box-sizing: border-box;
   
 }
-
-  body {
+  html body {
   font-family: 'Montserrat', sans-serif;
   color: var(--main-color-dark); 
+  background-color: #FAFBFC;
 }
 html h1 {
     margin: 0;
@@ -25,6 +25,10 @@ html h2 {
 
 .title-ff {
   font-family: 'TradeGothic', sans-serif;
+  &.fz-16 {
+    font-weight: 700;
+    font-size: 16px;
+  }
   &.fz-20 {
     font-weight: 700;
     font-size: 20px;
