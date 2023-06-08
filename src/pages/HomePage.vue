@@ -15,8 +15,7 @@
 
 export default {
   name: 'HomePage',
-  components: {
-  }
+  components: {}
 }
 </script>
 
