@@ -8,7 +8,6 @@
         <p class="text-header fz-20">Special offers to suit your plan</p>
       </div>
     </div>
-    <SiteSubscribeComponent/>
   </section>
 </template>
 

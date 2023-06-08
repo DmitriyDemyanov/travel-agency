@@ -39,13 +39,18 @@
           el.title }}</a>
       </div>
     </div>
+    <SiteSubscribeComponent />
   </section>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
+import SiteSubscribeComponent from './SiteSubscribeComponent';
 export default {
   name: 'FooterComponent',
+  components: {
+    SiteSubscribeComponent,
+  },
   computed: {
     ...mapGetters('flight',['getSocialMedia','getAboutUs','getOurDestinations','getOurActivities','getTravelBlogs'])
   }

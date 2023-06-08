@@ -1,8 +1,8 @@
 <template>
   <section class="wrapper-input">
     <label class="label-input fz-14" for="main-input">{{ labelText }}</label>
-    <input :class='`type-${type}`' class="main-input  fz-16" type="text" name="main-input"
-      :placeholder="`${placeholder}`">
+    <input :class='`type-${type}`' :placeholder="`${placeholder}`" class="main-input  fz-16" type="text" name="main-input"
+      @input="onInput">
     <div class="append-slot" @click="onClickIcon">
       <slot name="append"></slot>
     </div>
@@ -12,6 +12,11 @@
 <script>
 export default {
   name: 'MainInputComponent',
+  data() {
+    return {
+      content: this.value,
+    }
+  },
   props: {
     labelText: {
       type: String,
@@ -24,11 +29,16 @@ export default {
     type: {
       type: String,
       default: '',
-    }
+    },
+    value: String
   },
   methods: {
     onClickIcon() {
-      console.log('!onClickIcon$')
+      console.log('!onClickIcon$');
+    },
+    onInput() {
+      console.log("On Input");
+      this.$emit('input',this.content);
     }
   }
 }

@@ -5,23 +5,19 @@
   box-sizing: border-box;
   
 }
-  html body {
-  font-family: 'Montserrat', sans-serif;
-  color: var(--main-color-dark); 
-  background-color: #FAFBFC;
+
+html {
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--main-color-dark); 
+    background-color: #FAFBFC;
+    --bs-body-font-family: 'Montserrat', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+  }
 }
-html h1 {
-    margin: 0;
-  }
-html h2 {
-    margin: 0;
-  }
-  html h3 {
-    margin: 0;
-  }
-  html p {
-    margin: 0;
-  }
 
 .title-ff {
   font-family: 'TradeGothic', sans-serif;

@@ -1,15 +1,15 @@
 <template>
   <section class="wrapper-subscribe container-normal d-flex">
     <div class="wrapper-content">
-      <div class="subscribe-title title-ff fz-44">Subscribe <br> Newsletter</div>
+      <h1 class="subscribe-title title-ff fz-44">Subscribe <br> Newsletter</h1>
       <div class="subscribe-subtitle title-ff fz-20 font-color-8">The Travel</div>
       <div class="subscribe-description fz-16 font-color-7">Get inspired! Receive travel discounts, tips and behind the
         scenes stories.</div>
       <div class="input-form d-flex">
         <div class="wrapper-input">
-          <MainInputComponent type='no-bordered' placeholder='Your email address' />
+          <MainInputComponent type='no-bordered' placeholder='Your email address' v-model="email" />
         </div>
-        <button class="input-btn d-flex align-items-center justify-content-center fz-14">Subscribe</button>
+        <button class="input-btn d-flex align-items-center justify-content-center fz-14" @click='test'>Subscribe</button>
 
 
       </div>
@@ -30,6 +30,21 @@ export default {
   name: 'SiteSubscribeComponent',
   components: {
     MainInputComponent,
+  },
+  data() {
+    return {
+      email: ''
+    }
+  },
+  methods: {
+    test() {
+      console.log(this.email);
+    }
+  },
+  watch: {
+    email(val) {
+      console.log("-------------",val);
+    }
   }
 }
 </script>
@@ -62,7 +77,7 @@ export default {
 .subscribe-description {
   margin-top: 8px;
   margin-bottom: 16px;
-  font-family: 'Montserrat'; //????????????????????????????????????????????????????????
+  /* font-family: 'Montserrat'; //???????????????????????????????????????????????????????? */
 }
 
 .wrapper-input {

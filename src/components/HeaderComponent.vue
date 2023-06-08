@@ -1,7 +1,6 @@
 <template>
   <section>
-    <!-- @scroll='handleScroll' -->
-    <div class="wrapper-navigation d-flex justify-content-between align-items-center">
+    <div class="wrapper-navigation d-flex justify-content-between align-items-center" :class='{ sticked: isSticked }'>
       <div class="wrapper-service d-flex">
 
         <div class="item-flight d-flex">
@@ -43,20 +42,22 @@ export default {
   components: {
     MainButtonComponent,
   },
-  // created() {
-  //   window.addEventListener('scroll',this.handleScroll);
-  // },
-  // unmounted() {
-  //   window.removeEventListener('scroll',this.handleScroll);
-  // },
-  // methods: {
-  //   handleScroll(event) {
-
-  //     // console.log('event.timeStamp',event.timeStamp);
-  //     // console.log('this.$refs',this.$refs);
-
-  //   }
-  // }
+  data() {
+    return {
+      isSticked: false
+    }
+  },
+  created() {
+    window.addEventListener('scroll',this.handleScroll);
+  },
+  unmounted() {
+    window.removeEventListener('scroll',this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      this.isSticked = window.scrollY > 100;
+    }
+  }
 }
 </script>
 
@@ -67,6 +68,10 @@ export default {
   height: 90px;
   padding: 0 62px;
   color: #fff;
+
+  &.sticked {
+    color: brown;
+  }
 }
 
 .item-flight {
