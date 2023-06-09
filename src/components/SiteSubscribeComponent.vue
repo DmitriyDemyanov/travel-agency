@@ -7,15 +7,14 @@
         scenes stories.</div>
       <div class="input-form d-flex">
         <div class="wrapper-input">
-          <MainInputComponent type='no-bordered' placeholder='Your email address' v-model="email" />
+          <MainInputComponent type='no-bordered' placeholder='Your email address' v-model="email" @cleanInput='testing' />
+
         </div>
+
         <button class="input-btn d-flex align-items-center justify-content-center fz-14" @click='test'>Subscribe</button>
-
-
       </div>
+      <div v-show="!testEmail" style="color: red">ERROR email !!!</div>
     </div>
-
-
 
     <div class="image-subscribe">
       <img src="@/assets/image/photo/image-subscribe.png" alt="image">
@@ -26,6 +25,7 @@
 
 <script>
 import MainInputComponent from '@/components/MainInputComponent';
+import { mapActions,mapGetters } from 'vuex';
 export default {
   name: 'SiteSubscribeComponent',
   components: {
@@ -33,18 +33,37 @@ export default {
   },
   data() {
     return {
-      email: ''
+      email: '',
+      testEmail: true,
     }
+  },
+  computed: {
+    ...mapGetters('flight',['getEmailFooter'])
   },
   methods: {
+    ...mapActions('flight',['saveEmail']),
     test() {
-      console.log(this.email);
+      console.log('test',this.getEmailFooter);
+      if (this.getEmailFooter.split('').filter(el => el === '@').length !== 1 ||
+        this.getEmailFooter.split('').findIndex(el => el === '@') === 0) {
+        this.testEmail = false;
+        console.log('ERRRORRRR')
+      }
+      console.log(this.getEmailFooter.split('').filter(el => el === '@'))
+    },
+    testing() {
+      if (!this.testEmail) {
+        console.log('blabla')
+        this.$set(this.saveEmail(''));
+      }
     }
   },
+ 
   watch: {
     email(val) {
       console.log("-------------",val);
-    }
+    },
+    
   }
 }
 </script>

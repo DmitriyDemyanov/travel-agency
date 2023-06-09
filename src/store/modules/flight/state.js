@@ -70,5 +70,7 @@ export default {
       title: 'Work with us',
       link: '#'
     }
-  ]
+  ],
+  //__________________________________________testing
+  emailFooter: '',
 };

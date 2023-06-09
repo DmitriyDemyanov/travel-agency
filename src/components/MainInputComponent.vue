@@ -1,8 +1,8 @@
 <template>
   <section class="wrapper-input">
     <label class="label-input fz-14" for="main-input">{{ labelText }}</label>
-    <input :class='`type-${type}`' :placeholder="`${placeholder}`" class="main-input  fz-16" type="text" name="main-input"
-      @input="onInput">
+    <input :class='`type-${type}`' :placeholder="`${placeholder}`" class="main-input  fz-16" type="email"
+      name="main-input" v-model="email" @focus='$emit("cleanInput")' @input="onInput">
     <div class="append-slot" @click="onClickIcon">
       <slot name="append"></slot>
     </div>
@@ -10,10 +10,12 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
 export default {
   name: 'MainInputComponent',
   data() {
     return {
+      email: '',
       content: this.value,
     }
   },
@@ -33,13 +35,16 @@ export default {
     value: String
   },
   methods: {
+    ...mapActions('flight',['saveEmail']),
     onClickIcon() {
       console.log('!onClickIcon$');
     },
     onInput() {
-      console.log("On Input");
+      console.log("On Input",this.email);
       this.$emit('input',this.content);
-    }
+      this.saveEmail(this.email)
+    },
+
   }
 }
 </script>

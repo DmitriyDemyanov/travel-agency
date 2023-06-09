@@ -14,6 +14,9 @@ export default {
   },
   getTravelBlogs(state) {
     return state.travelBlogs;
+  },
+  getEmailFooter(state) {
+    return state.emailFooter
   }
 
 }

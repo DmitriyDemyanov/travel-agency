@@ -1,5 +1,5 @@
 <template>
-  <button class="main-button" :class='[`size-${size}`,`color-${color}`,`type-${type}`]'>
+  <button class="main-button" :class='[`size-${size}`,`color-${color}`,`type-${type}`]' @click='onClick'>
     <slot name='prepend'></slot>
     <span v-show="title" class="fz-14" :class='{ "prepend-icon": $slots.prepend,"append-icon": $slots.append }'>{{ title
     }}</span>
@@ -26,8 +26,13 @@ export default {
     type: {
       type: String,
       default: 'common',
-    }
+    },
   },
+  methods: {
+    onClick() {
+      console.log('CLICK-BTN!!!')
+    }
+  }
 }
 </script>
 
