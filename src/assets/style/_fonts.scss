@@ -2,12 +2,12 @@
   font-family: "TradeGothic";
   font-style: normal;
   font-weight: 400;
-  src: url("@/assets/fonts/TradeGothic-Regular.otf");
+  src: local("TradeGothic"), url("~@/assets/fonts/TradeGothic-Regular.otf");
 }
 
 @font-face {
   font-family: "TradeGothic";
   font-style: normal;
   font-weight: 700;
-  src: url("@/assets/fonts/TradeGothic-Bold.ttf");
+  src: local("TradeGothic"), url("~@/assets/fonts/TradeGothic-Bold.ttf") format("truetype");
 }

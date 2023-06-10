@@ -1,37 +1,26 @@
 <template>
   <section>
-
     <HeaderComponent />
-
-
-    <!-- <router-link class="p-2" to="/">Главная</router-link>  -->
-
-
-    <router-view class="main-view"></router-view>
+<!-- А зачем у router-view клас main-view? Я пока не вижу его использования, если нужно - верни.-->
+    <router-view></router-view>
     <FooterComponent />
   </section>
 </template>
 
 <script>
-
-
 import HeaderComponent from '@/components/HeaderComponent';
 import FooterComponent from '@/components/FooterComponent';
+
 export default {
   name: 'App',
   components: {
     HeaderComponent,
     FooterComponent,
-  },
-
+  }
 }
 </script>
 
 <style lang='scss'>
 @import "@/assets/style/index.scss";
-
-.container-normal {
-  width: 1232px;
-  margin: 0 auto;
-}
+// Перенес в index.scss
 </style>
