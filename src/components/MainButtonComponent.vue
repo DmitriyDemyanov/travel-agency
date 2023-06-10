@@ -1,5 +1,5 @@
 <template>
-  <button class="main-button" :class='[`size-${size}`,`color-${color}`,`type-${type}`]'>
+  <button class="main-button" :class='[`size-${size}`,`color-${color}`,`type-${type}`]' @click='$emit("mainBtn")'>
     <slot name='prepend'></slot>
     <span v-show="title" class="fz-14" :class='{ "prepend-icon": $slots.prepend,"append-icon": $slots.append }'>{{ title
     }}</span>
@@ -65,7 +65,8 @@ export default {
       color: var(--accent-color);
     }
   }
-   &.type-revers-transparent {
+
+  &.type-revers-transparent {
     background-color: transparent;
     color: var(--main-color-font);
     font-weight: 700;

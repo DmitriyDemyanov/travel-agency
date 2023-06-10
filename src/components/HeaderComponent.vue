@@ -29,10 +29,10 @@
       </div>
       <div class="wrapper-login d-flex align-items-center">
         <div class="item-login">
-          <MainButtonComponent title='Login' :type='colorBtnLogin' />
+          <MainButtonComponent title='Login' :type='colorBtnLogin' @mainBtn='clickBtn("login")' />
         </div>
         <div class="item-btn">
-          <MainButtonComponent title='Sign up' :color='colorBtnSignUp' />
+          <MainButtonComponent title='Sign up' :color='colorBtnSignUp' @mainBtn='clickBtn("sing-up")' />
         </div>
       </div>
     </div>
@@ -68,7 +68,10 @@ export default {
   methods: {
     handleScroll() {
       this.isSticked = window.scrollY > 100;
-    }
+    },
+    clickBtn(str) {
+      console.log('main-btn!!!:::',str)
+    },
   }
 }
 </script>

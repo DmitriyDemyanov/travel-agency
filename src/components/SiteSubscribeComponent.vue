@@ -39,7 +39,8 @@ export default {
   methods: {
     test() {
       console.log(this.email);
-    }
+    },
+   
   },
   watch: {
     email(val) {
