@@ -18,57 +18,100 @@ export default {
       link: 'https://instagram.com'
     },
   ],
-  ourDestinations: [
+  //_________________________________________________FOOTER_LINK
+  footerLink: [
     {
-      title: 'Canada'
+      title: 'Our Destinations',
+      links: [
+        {
+          textLink: 'Canada',
+          link: '#'
+        },
+        {
+          textLink: 'Alaska',
+          link: '#'
+        },
+        {
+          textLink: 'France',
+          link: '#'
+        },
+        {
+          textLink: 'Iceland',
+          link: '#'
+        }
+      ],
+    }
+    ,
+    {
+      title: 'Our Activities',
+      links: [
+        {
+          textLink: 'Northern Lights',
+          link: '#'
+        },
+        {
+          textLink: 'Cruising & sailing',
+          link: '#'
+        },
+        {
+          textLink: 'Multi-activities',
+          link: '#'
+        },
+        {
+          textLink: 'Kayaking',
+          link: '#'
+        }
+      ],
     },
     {
-      title: 'Alaska'
+      title: 'Travel Blogs',
+      links: [
+        {
+          textLink: 'Bali Travel Guide',
+          link: '#'
+        },
+        {
+          textLink: 'Sri Links Travel Guide',
+          link: '#'
+        },
+        {
+          textLink: 'Peru Travel Guide',
+          link: '#'
+        },
+        {
+          textLink: 'Bali Travel Guide',
+          link: '#'
+        }
+      ],
     },
     {
-      title: 'France'
+      title: 'about Us',
+      links: [
+        {
+          textLink: 'Our Story',
+          link: '#'
+        },
+        {
+          textLink: 'Work with us',
+          link: '#'
+        },
+
+      ],
     },
     {
-      title: 'Iceland'
-    },
-  ],
-  ourActivities: [
-    {
-      title: 'Northern Lights',
-    },
-    {
-      title: 'Cruising & sailing',
-    },
-    {
-      title: 'Multi-activities',
-    },
-    {
-      title: 'Kayaking',
+      title: 'Contact Us',
+      links: [
+        {
+          textLink: 'Our Story',
+          link: '#'
+        },
+        {
+          textLink: 'Work with us',
+          link: '#'
+        },
+
+      ],
     },
   ],
 
-  travelBlogs: [
-    {
-      title: 'Bali Travel Guide'
-    },
-    {
-      title: 'Sri Links Travel Guide'
-    },
-    {
-      title: 'Peru Travel Guide'
-    },
-    {
-      title: 'Bali Travel Guide'
-    },
-  ],
-  aboutUs: [
-    {
-      title: 'Our Story',
-      link: '#'
-    },
-    {
-      title: 'Work with us',
-      link: '#'
-    }
-  ]
-};
+}

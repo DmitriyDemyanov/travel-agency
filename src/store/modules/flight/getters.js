@@ -3,17 +3,9 @@ export default {
   getSocialMedia(state) {
     return state.socialMedia
   },
-  getAboutUs(state) {
-    return state.aboutUs;
+  getFooterLink(state) {
+    return state.footerLink;
   },
-  getOurDestinations(state) {
-    return state.ourDestinations;
-  },
-  getOurActivities(state) {
-    return state.ourActivities
-  },
-  getTravelBlogs(state) {
-    return state.travelBlogs;
-  }
+ 
 
 }
