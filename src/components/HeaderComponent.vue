@@ -1,5 +1,4 @@
 <template>
-<!-- div лишний, в нем нет необходимости, убрал -->
   <section class="navigation d-flex justify-content-between align-items-center" :class='{ sticked: isSticked }'>
 
     <div class="d-flex">
@@ -89,7 +88,6 @@ export default {
     color: var(--main-color-font);
     background-color: #fff;
     box-shadow: 0 4px 16px rgba(17, 34, 17, 0.05);
-    // По дизайну должен прилипать к верху
     top: 0;
 
     svg {
