@@ -7,12 +7,17 @@
         <p class="welcome__text fz-20">Special offers to suit your plan</p>
       </div>
     </div>
+    <QuickOrderComponent />
   </section>
 </template>
 
 <script>
+import QuickOrderComponent from '@/components/QuickOrderComponent';
 export default {
-  name: 'HomePage'
+  name: 'HomePage',
+  components: {
+    QuickOrderComponent,
+  }
 }
 </script>
 
@@ -21,6 +26,7 @@ export default {
 // чтобы я не косячил. Можем определить для каждого из блоков - для template, script, style
 .main-page {
   padding: var(--main-block-padding);
+  position: relative;
 }
 
 .welcome {

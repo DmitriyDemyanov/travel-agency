@@ -34,16 +34,18 @@
       <MainButtonComponent class="me-3" title='Login' :type='colorBtnLogin' />
       <MainButtonComponent title='Sign up' :color='colorBtnSignUp' />
     </div>
-
+    
   </section>
 </template>
 
 <script>
 import MainButtonComponent from '@/components/MainButtonComponent';
+
 export default {
   name: 'HeaderComponent',
   components: {
     MainButtonComponent,
+   
   },
   data() {
     return {
