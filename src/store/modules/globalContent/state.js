@@ -19,7 +19,7 @@ export default {
     },
   ],
   //_________________________________________________FOOTER_LINK
-  footerLink: [
+  footerLinks: [
     {
       title: 'Our Destinations',
       links: [

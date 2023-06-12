@@ -1,8 +1,6 @@
 <template>
   <section class="footer">
     <div class="footer__content container-normal">
-
-      <!-- Много лишних тегов и классов, убрал -->
       <div class="social">
         <a class="footer__logo" href="#">
           <img src="@/assets/image/icons/logo-dark.svg" alt="logo">
@@ -13,17 +11,7 @@
           </a>
         </div>
       </div>
-
-      <!-- Нужно сделать компонент и перебирать его. У нас 5 раз повторяется один и тот-же код. -->
-      <!-- Попробуй переделать, если не будет получаться или не понимаешь как (требуется также изменить -->
-      <!-- данные в store, сейчас там и линки на social и menu смешаны) - маякуй, я сделаю -->
-      <!-- <div class="footer__navigation">
-        <div class="footer__navigation_title title-ff fz-16">Our Destinations</div>
-        <a href="#" class="footer__navigation_link font-color-7  fz-14" v-for="(el,ind) in getOurDestinations" :key='ind'>
-          {{ el.title }}
-        </a>
-      </div> -->
-      <FooterMenuComponent :links='el' v-for="(el,ind) in getFooterLink" :key='ind' />
+      <FooterMenuComponent :links='el' v-for="(el,ind) in getfooterLinks" :key='ind' />
     </div>
     <SiteSubscribeComponent />
   </section>
@@ -40,9 +28,9 @@ export default {
     FooterMenuComponent,
   },
   computed: {
-    ...mapGetters("GlobalContent",[
+    ...mapGetters("globalContent",[
       'getSocialMedia',
-      'getFooterLink'
+      'getfooterLinks'
     ])
   }
 };

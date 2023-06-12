@@ -3,9 +3,9 @@ export default {
   getSocialMedia(state) {
     return state.socialMedia
   },
-  getFooterLink(state) {
-    return state.footerLink;
+  getfooterLinks(state) {
+    return state.footerLinks;
   },
- 
+
 
 }
