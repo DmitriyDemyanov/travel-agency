@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 
 // А почему flight называется?
-import flight from './modules/flight';
+import GlobalContent from './modules/GlobalContent';
 
 Vue.use(Vuex);
 
@@ -12,6 +12,6 @@ export default new Vuex.Store({
   mutations: {},
   actions: {},
   modules: {
-    flight,
+    GlobalContent,
   },
 });

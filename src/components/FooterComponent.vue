@@ -40,7 +40,7 @@ export default {
     FooterMenuComponent,
   },
   computed: {
-    ...mapGetters("flight",[
+    ...mapGetters("GlobalContent",[
       'getSocialMedia',
       'getFooterLink'
     ])
