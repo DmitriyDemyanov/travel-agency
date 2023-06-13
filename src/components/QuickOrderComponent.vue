@@ -26,17 +26,69 @@
         <div class="active__bar" v-show="stringOrder === 'Stays'"></div>
       </div>
     </div>
+    <form class="input-form" action="order">
 
+      <MainInputComponent placeholder='Lahore - Karachi' labelText='From - To' v-model="fromTo">
+        <template #append>
+          <img src="@/assets/image/icons/arrows-right-left.svg" alt="icon">
+        </template>
+      </MainInputComponent>
+
+      <MainInputComponent placeholder='Return' labelText='Trip' v-model="Trip">
+        <template #append>
+          <img src="@/assets/image/icons/chevron-down.svg" alt="icon">
+        </template>
+      </MainInputComponent>
+
+      <MainInputComponent placeholder='07 Nov 22 - 13 Nov 22' labelText='Depart- Return' v-model="departReturn" />
+
+      <MainInputComponent placeholder='1 Passenger, Economy' labelText='Passenger - Class' v-model="passengerClass" />
+    </form>
+
+    <div class="order__buttons ">
+
+      <MainButtonComponent title='Add Promo Code' :type='showActiveBtn'
+        :customStyle='{ color: "var(--main-color-font)" }' @hoverClass='hoverClass("Promo")'>
+        <template #prepend>
+          <img src="@/assets/image/icons/plus.svg" alt="icon">
+        </template>
+      </MainButtonComponent>
+
+
+      <MainButtonComponent title='Show Flights' :customStyle='{ color: "var(--main-color-font)" }'
+        @hoverClass='hoverClass("Flights")'>
+        <template #prepend>
+          <img src="@/assets/image/icons/paper-plane.svg" alt="icon">
+        </template>
+      </MainButtonComponent>
+
+    </div>
   </section>
 </template>
 
 <script>
+import MainInputComponent from '@/components/MainInputComponent';
+import MainButtonComponent from '@/components/MainButtonComponent';
 export default {
   name: 'QuickOrderComponent',
+  components: {
+    MainInputComponent,
+    MainButtonComponent,
+  },
   data() {
     return {
-      stringOrder: 'flights'
+      stringOrder: 'flights',
+      // объединить в Object??????? form = order 
+      fromTo: '',
+      Trip: '',
+      departReturn: '',
+      passengerClass: '',
+
+      showActiveBtn: 'Flights'
     }
+  },
+  computed: {
+  
   },
   methods: {
     userOrder(str) {
@@ -47,6 +99,12 @@ export default {
         this.stringOrder = 'flights'
       }
     },
+    hoverClass(str) {
+      console.log('!',str);
+      if (str === 'Promo') {
+        this.showActiveBtn = 'transparent'
+      }
+    }
   },
 }
 </script>
@@ -98,6 +156,17 @@ export default {
     }
 
   }
+
+  &__buttons {
+    display: flex;
+    justify-content: right;
+    margin-top: 32px;
+    margin-right: 16px;
+
+    :last-child {
+      margin-left: 10px;
+    }
+  }
 }
 
 .active__bar {
@@ -105,5 +174,13 @@ export default {
   height: 4px;
   background-color: var(--brand-color);
   margin-top: 29px;
+}
+
+//________________________________________wrapper-input
+.input-form {
+  margin-top: 33px;
+  display: grid;
+  grid-template-columns: 1fr 0.43fr 1fr 1fr;
+  column-gap: 24px;
 }
 </style>

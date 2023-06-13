@@ -5,6 +5,7 @@
       class="main-button"
       :class='[`size-${size}`,`color-${color}`,`type-${type}`]'
       :style="customStyle"
+       @mouseenter='$emit("hoverClass")'
   >
     <slot name='prepend'></slot>
     <span v-show="title" class="fz-14" :class='titleClasses'>
