@@ -47,15 +47,15 @@
 
     <div class="order__buttons ">
 
-      <MainButtonComponent title='Add Promo Code' :type='showActiveBtn'
-        :customStyle='{ color: "var(--main-color-font)" }' @hoverClass='hoverClass("Promo")'>
+      <MainButtonComponent title='Add Promo Code' :type='a' :customStyle='{ color: "var(--main-color-font)" }'
+        @hoverClass='hoverClass("Promo")'>
         <template #prepend>
           <img src="@/assets/image/icons/plus.svg" alt="icon">
         </template>
       </MainButtonComponent>
 
 
-      <MainButtonComponent title='Show Flights' :customStyle='{ color: "var(--main-color-font)" }'
+      <MainButtonComponent title='Show Flights' :type='b' :customStyle='{ color: "var(--main-color-font)" }'
         @hoverClass='hoverClass("Flights")'>
         <template #prepend>
           <img src="@/assets/image/icons/paper-plane.svg" alt="icon">
@@ -84,12 +84,12 @@ export default {
       departReturn: '',
       passengerClass: '',
 
-      showActiveBtn: 'Flights'
+      a: 'transparent',
+      b: '',
+
     }
   },
-  computed: {
-  
-  },
+
   methods: {
     userOrder(str) {
       if (str === 'Stays') {
@@ -100,19 +100,25 @@ export default {
       }
     },
     hoverClass(str) {
-      console.log('!',str);
+      console.log('@@@@@@@@@@',str);
       if (str === 'Promo') {
-        this.showActiveBtn = 'transparent'
+        this.a = '';
+        this.b = 'transparent'
+      }
+      if (str === 'flights') {
+        this.a = 'transparent'
+        this.b = '';
       }
     }
   },
+ 
 }
 </script>
 
 <style lang='scss' scoped>
 .order {
   position: absolute;
-  top: 100%;
+  bottom: 97px;
   right: 0;
   left: 0;
   min-height: 280px;
