@@ -56,7 +56,7 @@
 
 
       <MainButtonComponent title='Show Flights' :type='b' :customStyle='{ color: "var(--main-color-font)" }'
-        @hoverClass='hoverClass("Flights")'>
+        @hoverClass='hoverClass("flights")'>
         <template #prepend>
           <img src="@/assets/image/icons/paper-plane.svg" alt="icon">
         </template>
@@ -79,13 +79,14 @@ export default {
     return {
       stringOrder: 'flights',
       // объединить в Object??????? form = order 
+      order: {},
       fromTo: '',
       Trip: '',
       departReturn: '',
       passengerClass: '',
 
-      a: 'transparent',
-      b: '',
+      a: 'reverse-transparent',
+      b: 'test',
 
     }
   },
@@ -102,16 +103,18 @@ export default {
     hoverClass(str) {
       console.log('@@@@@@@@@@',str);
       if (str === 'Promo') {
-        this.a = '';
-        this.b = 'transparent'
+        this.a = 'test';
+        this.b = 'reverse-transparent';
+        console.log('Promo@',this.a);
       }
       if (str === 'flights') {
-        this.a = 'transparent'
-        this.b = '';
+        this.a = 'reverse-transparent'
+        this.b = 'test';
+        console.log('flights',this.b);
       }
     }
   },
- 
+
 }
 </script>
 

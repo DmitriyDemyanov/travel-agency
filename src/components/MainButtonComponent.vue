@@ -1,12 +1,8 @@
 <template>
-<!-- customStyle позволит тебе передавать из родителя любые стили, которые будут иметь приоритет.  -->
-<!-- Использую в SiteSubscribeComponent (Line 19) -->
-  <button
-      class="main-button"
-      :class='[`size-${size}`,`color-${color}`,`type-${type}`]'
-      :style="customStyle"
-       @mouseenter='$emit("hoverClass")'
-  >
+  <!-- customStyle позволит тебе передавать из родителя любые стили, которые будут иметь приоритет.  -->
+  <!-- Использую в SiteSubscribeComponent (Line 19) -->
+  <button class="main-button" :class='[`size-${size}`,`color-${color}`,`type-${type}`]' :style="customStyle"
+    @mouseenter='$emit("hoverClass")'>
     <slot name='prepend'></slot>
     <span v-show="title" class="fz-14" :class='titleClasses'>
       {{ title }}
@@ -17,22 +13,22 @@
 
 <script>
 export default {
-  name:     "MainButtonComponent",
-  props:    {
+  name: "MainButtonComponent",
+  props: {
     title: {
-      type:    String,
+      type: String,
       default: ""
     },
-    size:  {
-      type:    String,
+    size: {
+      type: String,
       default: "common"
     },
     color: {
-      type:    String,
+      type: String,
       default: "common"
     },
-    type:  {
-      type:    String,
+    type: {
+      type: String,
       default: "common"
     },
     customStyle: {
@@ -42,7 +38,7 @@ export default {
   },
   computed: {
     titleClasses() {
-      return {"prepend-icon": this.$slots.prepend, "append-icon": this.$slots.append};
+      return { "prepend-icon": this.$slots.prepend,"append-icon": this.$slots.append };
     }
   }
 };
@@ -50,21 +46,21 @@ export default {
 
 <style lang='scss' scoped>
 .main-button {
-  height:           48px;
+  height: 48px;
   background-color: var(--brand-color);
-  font-weight:      500;
-  font-size:        14px;
-  padding:          0 16px;
-  border:           none;
-  border-radius:    4px;
-  transition:       all 0.3s;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 4px;
+  transition: all 0.3s;
 
   &:hover {
     background-color: transparent;
   }
 
   &.type-bordered {
-    border:           1px solid var(--brand-color);
+    border: 1px solid var(--brand-color);
     background-color: transparent;
 
     &:hover {
@@ -74,9 +70,9 @@ export default {
 
   &.type-transparent {
     background-color: transparent;
-    color:            #fff;
-    font-weight:      700;
-    transition:       all 0.3s;
+    color: #fff;
+    font-weight: 700;
+    transition: all 0.3s;
 
     &:hover {
       color: var(--accent-color);
@@ -85,13 +81,17 @@ export default {
 
   &.type-reverse-transparent {
     background-color: transparent;
-    color:            var(--main-color-font);
-    font-weight:      700;
-    transition:       all 0.3s;
+    color: var(--main-color-font);
+    font-weight: 700;
+    transition: all 0.3s;
 
     &:hover {
       color: var(--accent-color);
     }
+  }
+
+  &.type-test {
+    background-color: var(--brand-color);
   }
 
   .prepend-icon {
@@ -117,7 +117,7 @@ export default {
 
 .color-dark {
   background-color: var(--main-color-font);
-  color:            #fff;
+  color: #fff;
 
   &:hover {
     background-color: var(--accent-color);
