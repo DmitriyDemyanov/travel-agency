@@ -22,19 +22,22 @@
         </svg>
         <div class="link-text fz-14">Find Stays</div>
       </div>
-    </div>
+      <div class="logo-home">
+        <a v-if="isSticked" href="#"><img src="@/assets/image/icons/logo-brand.svg" alt="logo"></a>
 
-    <div class="logo-home">
-      <a v-if="isSticked" href="#"><img src="@/assets/image/icons/logo-brand.svg" alt="logo"></a>
-      <a v-else href="#"><img src="@/assets/image/icons/logo-light.svg" alt="logo"></a>
-    </div>
+        <a v-else href="#"><img src="@/assets/image/icons/logo-light.svg" alt="logo"></a>
 
-    <div class="wrapper-login d-flex align-items-center">
-<!-- 2. div лишние, в них нет необходимости, убрал -->
-      <MainButtonComponent class="me-3" title='Login' :type='colorBtnLogin' />
-      <MainButtonComponent title='Sign up' :color='colorBtnSignUp' />
-    </div>
 
+      </div>
+      <div class="wrapper-login d-flex align-items-center">
+        <div class="item-login">
+          <MainButtonComponent title='Login' :type='colorBtnLogin' @click='userLogin' />
+        </div>
+        <div class="item-btn">
+          <MainButtonComponent title='Sign up' :color='colorBtnSignUp' @click='userSignUp' />
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -67,6 +70,12 @@ export default {
   methods: {
     handleScroll() {
       this.isSticked = window.scrollY > 100;
+    },
+    userLogin() {
+      console.log('User Login');
+    },
+    userSignUp() { 
+      console.log('User Sign Up');
     }
   }
 }
