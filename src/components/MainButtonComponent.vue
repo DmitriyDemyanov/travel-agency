@@ -1,34 +1,45 @@
 <template>
-  <button class="main-button" :class='[`size-${size}`,`color-${color}`,`type-${type}`]' @click='$emit("click")'>
+  <button class="main-button" :class='[`size-${size}`,`color-${color}`,`type-${type}`]' :style="customStyle"
+    @click='$emit("click")'>
     <slot name='prepend'></slot>
-    <span v-show="title" class="fz-14" :class='{ "prepend-icon": $slots.prepend,"append-icon": $slots.append }'>{{ title
-    }}</span>
+    <span v-show="title" class="fz-14" :class='titleClasses'>
+      {{ title }}
+    </span>
     <slot name='append'></slot>
   </button>
 </template>
 
 <script>
 export default {
-  name: 'MainButtonComponent',
+  name: "MainButtonComponent",
   props: {
     title: {
       type: String,
-      default: '',
+      default: ""
     },
     size: {
       type: String,
-      default: 'common',
+      default: "common"
     },
     color: {
       type: String,
-      default: 'common',
+      default: "common"
     },
     type: {
       type: String,
-      default: 'common',
+      default: "common"
+    },
+    customStyle: {
+      type: Object,
+      default: () => ({})
     }
   },
-}
+  computed: {
+    titleClasses() {
+      return { "prepend-icon": this.$slots.prepend,"append-icon": this.$slots.append };
+    }
+  }
+};
 </script>
 
 <style lang='scss' scoped>
@@ -66,7 +77,7 @@ export default {
     }
   }
 
-  &.type-revers-transparent {
+  &.type-reverse-transparent {
     background-color: transparent;
     color: var(--main-color-font);
     font-weight: 700;

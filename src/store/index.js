@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
-import flight from './modules/flight';
+import globalContent from './modules/globalContent';
 
 Vue.use(Vuex);
 
@@ -11,6 +11,6 @@ export default new Vuex.Store({
   mutations: {},
   actions: {},
   modules: {
-    flight,
+    globalContent,
   },
 });

@@ -1,30 +1,29 @@
 <template>
   <section>
-    <div class="content-header">
-      <div class="wrapper-header">
-
-        <h2 class="subtitle-header fz-accent-45">Helping Others</h2>
-        <h1 class="title-header">Live & Travel</h1>
-        <p class="text-header fz-20">Special offers to suit your plan</p>
+    <div class="main-page">
+      <div class="welcome">
+        <h2 class="welcome__subtitle secondary-font fz-accent-45">Helping Others</h2>
+        <h1 class="welcome__title secondary-font">Live & Travel</h1>
+        <p class="welcome__text fz-20">Special offers to suit your plan</p>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-
 export default {
-  name: 'HomePage',
-  components: {}
+  name: 'HomePage'
 }
 </script>
 
 <style lang='scss' scoped>
-.content-header {
-  margin: 30px 30px 0 30px;
+// Используй или " или '. Прими решение, какие кавычки мы будем использовать в проекте как основные и мне тоже скажи,
+// чтобы я не косячил. Можем определить для каждого из блоков - для template, script, style
+.main-page {
+  padding: var(--main-block-padding);
 }
 
-.wrapper-header {
+.welcome {
   padding: 24px 32px 0 32px;
   margin-bottom: 183px;
   width: 100%;
@@ -36,32 +35,29 @@ export default {
   border-radius: 24px;
   color: #fff;
 
-}
+  &__title {
+    margin-top: 4px;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 101px;
+    text-align: center;
+    text-transform: uppercase;
+  }
 
-.subtitle-header {
-  margin-top: 84px;
-  text-align: center;
-  font-family: "TradeGothic LT Extended";
-  line-height: 57px;
-  font-weight: 700;
-}
+  &__subtitle {
+    margin-top: 84px;
+    text-align: center;
+    line-height: 57px;
+    font-weight: 700;
+  }
 
-.title-header {
-  margin-top: 4px;
-  font-family: 'TradeGothic LT Extended';
-  font-weight: 700;
-  font-size: 80px;
-  line-height: 101px;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.text-header {
-  margin-top: 16px;
-  font-family: 'Montserrat';
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 24px;
-  text-align: center;
+  &__text {
+    margin-top: 16px;
+    // у нас уже установлен 'Montserrat' как main font, удалил дубликат
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
 }
 </style>

@@ -1,24 +1,40 @@
 @import '_fonts.scss';
 @import '_variables.scss';
 
+// ----- GENERAL -----
 * {
   box-sizing: border-box;
-  
 }
 
 html {
   body {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--main-color-dark); 
-    background-color: #FAFBFC;
-    --bs-body-font-family: 'Montserrat', sans-serif;
+    font-family: var(--primary-font);
+    color: var(--main-color-dark);
+    // У нас есть соотвтетствующая переменная
+    background-color: var(bg-color);
+    --bs-body-font-family: var(--primary-font);
   }
 
   h1, h2, h3, h4, h5, h6, p {
     margin: 0;
   }
+
+  // Вынес на глобальный уровень и привязал к переменной, чтобы каждый раз не менять
+  a {
+    --bs-link-color: var(--main-color-font);
+    text-decoration: none;
+    transition: all 0.3s;
+
+    &:hover {
+      color: var(--accent-color);
+    }
+  }
 }
 
+
+
+// ----- FONTS -----
+// Бардак, нужно подумать как упорядочить, сделаю тикет на себя
 .title-ff {
   font-family: 'TradeGothic', sans-serif;
   &.fz-16 {
@@ -36,6 +52,7 @@ html {
     line-height: 54px;
   }
 }
+
 .font-color-8 {
   opacity: 0.8;
 }
@@ -48,7 +65,6 @@ html {
 .font-color-4 {
   opacity: 0.4;
 }
-// _______________________________________________Font-size ---Montserrat
 
 .fz-14 {
   font-weight: 500;
@@ -66,11 +82,24 @@ html {
   line-height: 24px;
 }
 
+// У нас нет такого шрифта "TradeGothic LT Extended", мы назвали шрифт "TradeGothic". Файл _fonts.scc, Line2, Line 9
+// Предлагаю сделать клас для переключения шрифтов (secondary-font)
 // _______________________________________________Font-size ---TradeGothic LT Extended
 
+.secondary-font {
+  font-family: var(--secondary-font);
+}
+
 .fz-accent-45 {
-  font-family: "TradeGothic LT Extended" ;
+  font-family: "TradeGothic", sans-serif ;
   font-weight: 700;
   font-size: 45px;
   line-height: 57px;
+}
+
+// ----- COMMON -----
+
+.container-normal {
+  width: 1232px;
+  margin: 0 auto;
 }
