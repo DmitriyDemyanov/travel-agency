@@ -1,6 +1,6 @@
 <template>
   <button class="main-button" :class='[`size-${size}`,`color-${color}`,`type-${type}`]' :style="customStyle"
-    @click='$emit("click")'>
+    @click='$emit("click")' @mouseenter='$emit("hoverClass")'>
     <slot name='prepend'></slot>
     <span v-show="title" class="fz-14" :class='titleClasses'>
       {{ title }}

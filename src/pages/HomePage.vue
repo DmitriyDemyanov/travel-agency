@@ -1,11 +1,9 @@
 <template>
-  <section>
-    <div class="main-page">
-      <div class="welcome">
-        <h2 class="welcome__subtitle secondary-font fz-accent-45">Helping Others</h2>
-        <h1 class="welcome__title secondary-font">Live & Travel</h1>
-        <p class="welcome__text fz-20">Special offers to suit your plan</p>
-      </div>
+  <section class="main-page">
+    <div class="welcome">
+      <h2 class="welcome__subtitle secondary-font fz-accent-45">Helping Others</h2>
+      <h1 class="welcome__title secondary-font">Live & Travel</h1>
+      <p class="welcome__text fz-20">Special offers to suit your plan</p>
     </div>
     <QuickOrderComponent />
   </section>
@@ -59,7 +57,7 @@ export default {
 
   &__text {
     margin-top: 16px;
-   
+
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;

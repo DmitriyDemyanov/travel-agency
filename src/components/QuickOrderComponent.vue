@@ -1,8 +1,8 @@
 <template>
   <section class="order container-normal">
-    <div class="order__items d-flex ">
+    <div class="d-flex ">
 
-      <div class="order__item" @click='userOrder("flights")'>
+      <div class="order__tab" @click='userOrder("flights")'>
         <div class="d-flex align-items-center ">
           <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -11,10 +11,11 @@
           </svg>
           <div class="order__title">Flights</div>
         </div>
+        <!-- ToDo - remove -->
         <div class="active__bar" v-show="stringOrder === 'flights'"></div>
       </div>
 
-      <div class="order__item" @click='userOrder("Stays")'>
+      <div class="order__tab" @click='userOrder("Stays")'>
         <div class="d-flex align-items-center ">
           <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -23,40 +24,41 @@
           </svg>
           <div class="order__title">Stays</div>
         </div>
+        <!-- ToDo - remove -->
         <div class="active__bar" v-show="stringOrder === 'Stays'"></div>
       </div>
     </div>
-    <form class="input-form" action="order">
 
-      <MainInputComponent placeholder='Lahore - Karachi' labelText='From - To' v-model="fromTo">
+    <form class="input-form">
+
+      <MainInputComponent placeholder='Lahore - Karachi' labelText='From - To' v-model="order.fromTo">
         <template #append>
           <img src="@/assets/image/icons/arrows-right-left.svg" alt="icon">
         </template>
       </MainInputComponent>
 
-      <MainInputComponent placeholder='Return' labelText='Trip' v-model="Trip">
+      <MainInputComponent placeholder='Return' labelText='Trip' v-model="order.trip">
         <template #append>
           <img src="@/assets/image/icons/chevron-down.svg" alt="icon">
         </template>
       </MainInputComponent>
 
-      <MainInputComponent placeholder='07 Nov 22 - 13 Nov 22' labelText='Depart- Return' v-model="departReturn" />
+      <MainInputComponent placeholder='07 Nov 22 - 13 Nov 22' labelText='Depart- Return' v-model="order.departReturn" />
 
-      <MainInputComponent placeholder='1 Passenger, Economy' labelText='Passenger - Class' v-model="passengerClass" />
+      <MainInputComponent placeholder='1 Passenger, Economy' labelText='Passenger - Class'
+        v-model="order.passengerClass" />
     </form>
 
     <div class="order__buttons ">
 
-      <MainButtonComponent title='Add Promo Code' :type='a' :customStyle='{ color: "var(--main-color-font)" }'
-        @hoverClass='hoverClass("Promo")'>
+      <MainButtonComponent title='Add Promo Code' type='reverse-transparent' @click='userPromo'>
         <template #prepend>
           <img src="@/assets/image/icons/plus.svg" alt="icon">
         </template>
       </MainButtonComponent>
 
 
-      <MainButtonComponent title='Show Flights' :type='b' :customStyle='{ color: "var(--main-color-font)" }'
-        @hoverClass='hoverClass("flights")'>
+      <MainButtonComponent title='Show Flights' @click='userFlights'>
         <template #prepend>
           <img src="@/assets/image/icons/paper-plane.svg" alt="icon">
         </template>
@@ -78,15 +80,15 @@ export default {
   data() {
     return {
       stringOrder: 'flights',
-      // объединить в Object??????? form = order 
-      order: {},
-      fromTo: '',
-      Trip: '',
-      departReturn: '',
-      passengerClass: '',
+      order: {
+        fromTo: '',
+        trip: '',
+        departReturn: '',
+        passengerClass: '',
+      },
 
-      a: 'reverse-transparent',
-      b: 'test',
+
+
 
     }
   },
@@ -100,19 +102,12 @@ export default {
         this.stringOrder = 'flights'
       }
     },
-    hoverClass(str) {
-      console.log('@@@@@@@@@@',str);
-      if (str === 'Promo') {
-        this.a = 'test';
-        this.b = 'reverse-transparent';
-        console.log('Promo@',this.a);
-      }
-      if (str === 'flights') {
-        this.a = 'reverse-transparent'
-        this.b = 'test';
-        console.log('flights',this.b);
-      }
-    }
+    userPromo() {
+      console.log('promo')
+    },
+    userFlights() {
+      console.log('flights')
+    },
   },
 
 }
@@ -130,9 +125,7 @@ export default {
   border-radius: 16px;
   padding: 16px 16px 32px 32px;
 
-
-
-  &__item {
+  &__tab {
     padding-top: 14px;
     transition: all 0.3s;
     cursor: pointer;
