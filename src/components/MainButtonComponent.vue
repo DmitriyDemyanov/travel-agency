@@ -1,8 +1,6 @@
 <template>
-  <!-- customStyle позволит тебе передавать из родителя любые стили, которые будут иметь приоритет.  -->
-  <!-- Использую в SiteSubscribeComponent (Line 19) -->
   <button class="main-button" :class='[`size-${size}`,`color-${color}`,`type-${type}`]' :style="customStyle"
-    @mouseenter='$emit("hoverClass")'>
+    @click='$emit("click")'>
     <slot name='prepend'></slot>
     <span v-show="title" class="fz-14" :class='titleClasses'>
       {{ title }}
