@@ -1,5 +1,5 @@
 <template>
-  <button class="main-button" :class='[`size-${size}`,`color-${color}`,`type-${type}`]' @click='$emit("mainBtn")'>
+  <button class="main-button" :class='[`size-${size}`,`color-${color}`,`type-${type}`]' @click='$emit("click")'>
     <slot name='prepend'></slot>
     <span v-show="title" class="fz-14" :class='{ "prepend-icon": $slots.prepend,"append-icon": $slots.append }'>{{ title
     }}</span>
