@@ -7,12 +7,17 @@
         <p class="welcome__text fz-20">Special offers to suit your plan</p>
       </div>
     </div>
+    <PlacesPlanComponent/>
   </section>
 </template>
 
 <script>
+import PlacesPlanComponent from '@/components/PlacesPlanComponent';
 export default {
-  name: 'HomePage'
+  name: 'HomePage',
+  components: {
+    PlacesPlanComponent,
+  }
 }
 </script>
 
