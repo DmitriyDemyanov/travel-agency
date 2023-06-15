@@ -160,7 +160,6 @@ export default {
         fill: var(--main-color-font);
       }
     }
-
   }
 
   &__buttons {
@@ -190,11 +189,4 @@ export default {
   column-gap: 24px;
 }
 
-#prepend {
-  svg {
-    path {
-      stroke: red;
-    }
-  }
-}
 </style>
