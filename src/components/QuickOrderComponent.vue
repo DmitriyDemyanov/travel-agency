@@ -53,7 +53,11 @@
 
       <MainButtonComponent title='Add Promo Code' type='reverse-transparent' @click='userPromo'>
         <template #prepend>
-          <img src="@/assets/image/icons/plus.svg" alt="icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 3.5V12.5V3.5ZM12.5 8H3.5H12.5Z" fill="#112211" />
+            <path d="M8 3.5V12.5M12.5 8H3.5" stroke="#112211" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
         </template>
       </MainButtonComponent>
 
@@ -116,7 +120,7 @@ export default {
 <style lang='scss' scoped>
 .order {
   position: absolute;
-  bottom: 97px;
+  bottom: 30px;
   right: 0;
   left: 0;
   min-height: 280px;
@@ -184,5 +188,13 @@ export default {
   display: grid;
   grid-template-columns: 1fr 0.43fr 1fr 1fr;
   column-gap: 24px;
+}
+
+#prepend {
+  svg {
+    path {
+      stroke: red;
+    }
+  }
 }
 </style>

@@ -81,11 +81,20 @@ export default {
     background-color: transparent;
     color: var(--main-color-font);
     font-weight: 700;
-    transition: all 0.3s;
+    transition: all 1s;
 
     &:hover {
       color: var(--accent-color);
+
+      svg {
+        path {
+          transition: all 1s;
+          stroke: var(--accent-color);
+        }
+      }
     }
+
+
   }
 
   &.type-test {
@@ -119,6 +128,15 @@ export default {
 
   &:hover {
     background-color: var(--accent-color);
+  }
+}
+
+
+#prepend {
+  svg {
+    path {
+      stroke: red;
+    }
   }
 }
 </style>
