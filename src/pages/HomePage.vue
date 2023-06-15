@@ -7,12 +7,17 @@
         <p class="welcome__text fz-20">Special offers to suit your plan</p>
       </div>
     </div>
+    <PagesNavigationComponent/>
   </section>
 </template>
 
 <script>
+import PagesNavigationComponent from '@/components/PagesNavigationComponent';
 export default {
-  name: 'HomePage'
+  name: 'HomePage',
+  components: {
+    PagesNavigationComponent,
+  }
 }
 </script>
 

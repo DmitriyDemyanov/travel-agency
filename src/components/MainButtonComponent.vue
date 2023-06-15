@@ -109,6 +109,14 @@ export default {
   }
 }
 
+.color-brand {
+  background-color: var(--brand-color);
+
+  &:hover {
+    background-color: var(--accent-color);
+  }
+}
+
 .color-dark {
   background-color: var(--main-color-font);
   color: #fff;
