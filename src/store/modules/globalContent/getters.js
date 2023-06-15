@@ -6,6 +6,9 @@ export default {
   getfooterLinks(state) {
     return state.footerLinks;
   },
-
+  //________________________________PLAN_PLACES
+  getPlanPlaces(state) {
+    return state.planPlaces;
+  }
 
 }

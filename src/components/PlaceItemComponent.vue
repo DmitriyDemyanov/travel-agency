@@ -1,12 +1,12 @@
 <template>
   <section class='place d-flex align-items-center'>
-    <div class="place__image"><img src="@/assets/image/photo/istanbul.png" alt="photo"></div>
+    <div class="place__image"><img :src="require(`@/assets/image/photo/${card.img}.png`)" alt="photo"></div>
     <div class="place__content">
-      <div class=" fz-16 font-color-7">Istanbul, Turkey</div>
-      <span class='place__link'>
-        <a href="#">Flights</a> •
-        <a href="#">Hotels</a> •
-        <a href="#">Resorts</a>
+      <div class="place__title fz-16 font-color-7"> {{ card.city }}, {{ card.country }} </div>
+      <span class='place__link fz-14'>
+        <a :href="card.links.flights" target="_blank">Flights</a> •
+        <a :href="card.links.hotels" target="_blank">Hotels</a> •
+        <a :href="card.links.resorts" target="_blank">Resorts</a>
       </span>
     </div>
   </section>
@@ -14,7 +14,13 @@
 
 <script>
 export default {
-  name: 'PlaceItemComponent'
+  name: 'PlaceItemComponent',
+  props: {
+    card: {
+      type: Object,
+      required: true,
+    },
+  }
 }
 </script>
 
@@ -38,8 +44,23 @@ export default {
     }
   }
 
+  &__title {
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: capitalize;
+  }
+
   &__link {
-    margin-top: 8px;
+
+    a {
+      margin-right: 8px;
+      margin-left: 8px;
+
+    }
+
+    :first-child {
+      margin-left: 0;
+    }
   }
 }
 </style>
