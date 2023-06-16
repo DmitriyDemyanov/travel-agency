@@ -3,9 +3,11 @@ export default {
   getSocialMedia(state) {
     return state.socialMedia
   },
-  getfooterLinks(state) {
+  getFooterLinks(state) {
     return state.footerLinks;
   },
-
+  getItemsPage(state) {
+    return state.pageItems;
+  }
 
 }

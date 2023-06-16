@@ -1,9 +1,9 @@
 <template>
-  <section class="page">
+  <section class="page" :style='{ BackgroundImage: `require(url(@/assets/image/photo/bg-${test.bg}.png))` }'>
     <!--не такой TradeGothic???????????-->
-    <div class="page__title secondary-font fz-40">Flights</div>
+    <div class="page__title secondary-font fz-40">{{ test.title }}</div>
     <div class="page__description fz-16">Search Flights & Places Hire to our most popular destinations</div>
-    <MainButtonComponent title='Show Flights' color='brand'>
+    <MainButtonComponent :title='test.textBtn' color='brand' @click='routeToFlights'>
       <template #prepend> <img src="@/assets/image/icons/paper-plane.svg" alt="icon"></template>
     </MainButtonComponent>
   </section>
@@ -16,6 +16,17 @@ export default {
   components: {
     MainButtonComponent,
   },
+  props: {
+    test: {
+      type: Object,
+      default: () => ({}),
+    }
+  },
+  methods: {
+    routeToFlights() {
+      console.log('routeToFlights')
+    }
+  }
 }
 </script>
 
@@ -23,7 +34,7 @@ export default {
 .page {
   width: 100%;
   min-height: 560px;
-  background-image: url('@/assets/image/photo/bg-flights.png');
+  /* background-image: url('@/assets/image/photo/bg-flights.png'); */
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 20px;
@@ -32,6 +43,7 @@ export default {
   color: #fff;
 
   &:hover {
+    transition: all 0.5s;
     scale: 1.05;
   }
 

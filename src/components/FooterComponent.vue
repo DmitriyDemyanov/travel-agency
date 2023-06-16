@@ -11,9 +11,10 @@
           </a>
         </div>
       </div>
-      <FooterMenuComponent :links='el' v-for="(el,ind) in getfooterLinks" :key='ind' />
+      <FooterMenuComponent :links='el' v-for="(el,ind) in getFooterLinks" :key='ind' />
     </div>
     <SiteSubscribeComponent />
+   
   </section>
 </template>
 
@@ -30,7 +31,7 @@ export default {
   computed: {
     ...mapGetters("globalContent",[
       'getSocialMedia',
-      'getfooterLinks'
+      'getFooterLinks',
     ])
   }
 };

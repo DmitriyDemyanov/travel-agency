@@ -1,17 +1,26 @@
 <template>
   <section class="pages__nav container-normal">
-    <PageItemNavigation />
-    <PageItemNavigation />
+
+    <PageItemNavigation v-for='(el,ind) in getItemsPage' :key='ind' :test='el' />
+
   </section>
 </template>
 
 <script>
 import PageItemNavigation from '@/components/PageItemNavigation';
+
+import { mapGetters } from 'vuex';
+
 export default {
   name: 'PagesNavigationComponent',
   components: {
     PageItemNavigation,
-  }
+  },
+  computed: {
+    ...mapGetters("globalContent",["getItemsPage"])
+  },
+
+
 }
 </script>
 

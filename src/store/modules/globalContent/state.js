@@ -113,5 +113,19 @@ export default {
       ],
     },
   ],
-
+  //_________________________________________PageItemNavigation
+  pageItems: [
+    {
+      title: 'Flights',
+      subtitle: 'Search Flights & Places Hire to our most popular destinations',
+      textBtn: 'Show Flights',
+      bg: 'flights',
+    },
+    {
+      title: 'Hotels',
+      subtitle: 'Search Flights & Places Hire to our most popular destinations',
+      textBtn: 'Show Hotels',
+      bg: 'hotels',
+    }
+  ],
 }
