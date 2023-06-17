@@ -114,18 +114,23 @@ export default {
     },
   ],
   //_________________________________________PageItemNavigation
-  pageItems: [
+  renderDataNav: [
     {
       title: 'Flights',
       subtitle: 'Search Flights & Places Hire to our most popular destinations',
       textBtn: 'Show Flights',
       bg: 'flights',
+      route: '/flights'
     },
     {
       title: 'Hotels',
       subtitle: 'Search Flights & Places Hire to our most popular destinations',
       textBtn: 'Show Hotels',
       bg: 'hotels',
+      route: '/hotels'
     }
   ],
 }
+
+// @/assets/image/photo/bg-flights.png
+// @/assets/image/photo/bg-hotels.png

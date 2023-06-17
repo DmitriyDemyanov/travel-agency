@@ -6,8 +6,8 @@ export default {
   getFooterLinks(state) {
     return state.footerLinks;
   },
-  getItemsPage(state) {
-    return state.pageItems;
+  getRenderDataNav(state) {
+    return state.renderDataNav;
   }
 
 }

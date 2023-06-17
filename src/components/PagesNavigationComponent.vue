@@ -1,7 +1,7 @@
 <template>
   <section class="pages__nav container-normal">
 
-    <PageItemNavigation v-for='(el,ind) in getItemsPage' :key='ind' :test='el' />
+    <PageItemNavigation v-for='(el,ind) in getRenderDataNav' :key='ind' :renderData='el' />
 
   </section>
 </template>
@@ -17,7 +17,7 @@ export default {
     PageItemNavigation,
   },
   computed: {
-    ...mapGetters("globalContent",["getItemsPage"])
+    ...mapGetters("globalContent",["getRenderDataNav"])
   },
 
 
