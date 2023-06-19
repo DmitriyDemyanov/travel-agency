@@ -1,6 +1,10 @@
 <template>
-  <button class="main-button" :class='[`size-${size}`,`color-${color}`,`type-${type}`]' :style="customStyle"
-    @click='$emit("click")' @mouseenter='$emit("hoverClass")'>
+  <button
+      class="main-button"
+      :class='[`size-${size}`,`color-${color}`,`type-${type}`]'
+      :style="customStyle"
+      @click='$emit("click")'
+  >
     <slot name='prepend'></slot>
     <span v-show="title" class="fz-14" :class='titleClasses'>
       {{ title }}
@@ -93,10 +97,6 @@ export default {
         }
       }
     }
-  }
-
-  &.type-test {
-    background-color: var(--brand-color);
   }
 
   .prepend-icon {

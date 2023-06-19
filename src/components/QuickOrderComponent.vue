@@ -2,7 +2,7 @@
   <section class="order container-normal">
     <div class="d-flex ">
 
-      <div class="order__tab" @click='userOrder("flights")'>
+      <div class="order__tab" @click="currentForm = 'FormFlightsComponent'">
         <div class="d-flex align-items-center ">
           <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -11,11 +11,10 @@
           </svg>
           <div class="order__title">Flights</div>
         </div>
-        <!-- ToDo - remove -->
-        <div class="active__bar" v-show="stringOrder === 'flights'"></div>
+        <div class="active__bar" v-show="currentForm === 'FormFlightsComponent'"></div>
       </div>
 
-      <div class="order__tab" @click='userOrder("Stays")'>
+      <div class="order__tab" @click="currentForm = 'FormHotelsComponent'">
         <div class="d-flex align-items-center ">
           <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -24,96 +23,32 @@
           </svg>
           <div class="order__title">Stays</div>
         </div>
-        <!-- ToDo - remove -->
-        <div class="active__bar" v-show="stringOrder === 'Stays'"></div>
+        <div class="active__bar" v-show="currentForm === 'FormHotelsComponent'"></div>
       </div>
     </div>
 
-    <form class="input-form">
+    <component :is="currentForm"></component>
 
-      <MainInputComponent placeholder='Lahore - Karachi' labelText='From - To' v-model="order.fromTo">
-        <template #append>
-          <img src="@/assets/image/icons/arrows-right-left.svg" alt="icon">
-        </template>
-      </MainInputComponent>
-
-      <MainInputComponent placeholder='Return' labelText='Trip' v-model="order.trip">
-        <template #append>
-          <img src="@/assets/image/icons/chevron-down.svg" alt="icon">
-        </template>
-      </MainInputComponent>
-
-      <MainInputComponent placeholder='07 Nov 22 - 13 Nov 22' labelText='Depart- Return' v-model="order.departReturn" />
-
-      <MainInputComponent placeholder='1 Passenger, Economy' labelText='Passenger - Class'
-        v-model="order.passengerClass" />
-    </form>
-
-    <div class="order__buttons ">
-
-      <MainButtonComponent title='Add Promo Code' type='reverse-transparent' @click='userPromo'>
-        <template #prepend>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M8 3.5V12.5V3.5ZM12.5 8H3.5H12.5Z" fill="#112211" />
-            <path d="M8 3.5V12.5M12.5 8H3.5" stroke="#112211" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-        </template>
-      </MainButtonComponent>
-
-
-      <MainButtonComponent title='Show Flights' @click='userFlights'>
-        <template #prepend>
-          <img src="@/assets/image/icons/paper-plane.svg" alt="icon">
-        </template>
-      </MainButtonComponent>
-
-    </div>
   </section>
 </template>
 
 <script>
-import MainInputComponent from '@/components/MainInputComponent';
-import MainButtonComponent from '@/components/MainButtonComponent';
+import FormFlightsComponent from "@/components/FormFlightsComponent";
+import FormHotelsComponent from "@/components/FormHotelsComponent";
+
 export default {
   name: 'QuickOrderComponent',
   components: {
-    MainInputComponent,
-    MainButtonComponent,
+    FormFlightsComponent,
+    FormHotelsComponent
   },
   data() {
     return {
-      stringOrder: 'flights',
-      order: {
-        fromTo: '',
-        trip: '',
-        departReturn: '',
-        passengerClass: '',
-      },
-
-
-
-
+      currentForm: 'FormFlightsComponent'
     }
   },
-
   methods: {
-    userOrder(str) {
-      if (str === 'Stays') {
-        this.stringOrder = 'Stays'
-      }
-      else if (str === 'flights') {
-        this.stringOrder = 'flights'
-      }
-    },
-    userPromo() {
-      console.log('promo')
-    },
-    userFlights() {
-      console.log('flights')
-    },
-  },
-
+  }
 }
 </script>
 
@@ -125,7 +60,7 @@ export default {
   left: 0;
   min-height: 280px;
   background-color: #FFFFFF;
-  box-shadow: 0px 4px 16px rgba(141, 211, 187, 0.15);
+  box-shadow: 0 4px 16px rgba(141, 211, 187, 0.15);
   border-radius: 16px;
   padding: 16px 16px 32px 32px;
 
@@ -161,17 +96,6 @@ export default {
       }
     }
   }
-
-  &__buttons {
-    display: flex;
-    justify-content: right;
-    margin-top: 32px;
-    margin-right: 16px;
-
-    :last-child {
-      margin-left: 10px;
-    }
-  }
 }
 
 .active__bar {
@@ -180,13 +104,4 @@ export default {
   background-color: var(--brand-color);
   margin-top: 29px;
 }
-
-//________________________________________wrapper-input
-.input-form {
-  margin-top: 33px;
-  display: grid;
-  grid-template-columns: 1fr 0.43fr 1fr 1fr;
-  column-gap: 24px;
-}
-
 </style>

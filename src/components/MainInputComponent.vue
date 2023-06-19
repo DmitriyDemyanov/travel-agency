@@ -1,8 +1,14 @@
 <template>
   <section class="wrapper-input">
     <label class="label-input fz-14" for="main-input">{{ labelText }}</label>
-    <input :class='`type-${type}`' :placeholder="`${placeholder}`" :value="value" class="main-input fz-16" type="text"
-      name="main-input" @input="onInput($event)">
+    <input
+        type="text"
+        name="main-input"
+        :class='`type-${type}`'
+        :placeholder="`${placeholder}`"
+        :value="value" class="main-input fz-16"
+        @input="onInput($event)"
+    >
     <div class="append-slot" @click="onClickIcon">
       <slot name="append"></slot>
     </div>
@@ -74,7 +80,6 @@ export default {
     outline: #79747E;
 
   }
-
 }
 
 .append-slot {
