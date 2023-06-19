@@ -114,7 +114,7 @@ export default {
     },
   ],
   //_________________________________________PageItemNavigation
-  renderDataNav: [
+  landingNavigations: [
     {
       title: 'Flights',
       subtitle: 'Search Flights & Places Hire to our most popular destinations',
@@ -131,6 +131,3 @@ export default {
     }
   ],
 }
-
-// @/assets/image/photo/bg-flights.png
-// @/assets/image/photo/bg-hotels.png

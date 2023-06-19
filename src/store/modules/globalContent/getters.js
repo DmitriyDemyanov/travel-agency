@@ -6,8 +6,8 @@ export default {
   getFooterLinks(state) {
     return state.footerLinks;
   },
-  getRenderDataNav(state) {
-    return state.renderDataNav;
+  getLandingNavigations(state) {
+    return state.landingNavigations;
   }
 
 }
