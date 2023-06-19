@@ -7,23 +7,21 @@
         <p class="welcome__text fz-20">Special offers to suit your plan</p>
       </div>
     </div>
-    <PlacesPlanComponent/>
+    <PlacesComponent/>
   </section>
 </template>
 
 <script>
-import PlacesPlanComponent from '@/components/PlacesPlanComponent';
+import PlacesComponent from '@/components/PlacesComponent';
 export default {
   name: 'HomePage',
   components: {
-    PlacesPlanComponent,
+    PlacesComponent,
   }
 }
 </script>
 
 <style lang='scss' scoped>
-// Используй или " или '. Прими решение, какие кавычки мы будем использовать в проекте как основные и мне тоже скажи,
-// чтобы я не косячил. Можем определить для каждого из блоков - для template, script, style
 .main-page {
   padding: var(--main-block-padding);
 }

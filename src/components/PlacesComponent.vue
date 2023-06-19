@@ -5,11 +5,15 @@
         <div class='places__title fz-32'>Plan your perfect trip</div>
         <div class='fz-16 font-color-7'>Search Flights & Places Hire to our most popular destinations</div>
       </div>
-      <MainButtonComponent title='See more places' type='bordered' :customStyle='{ height: "40px" }'
-        @click='UserSeeMorePlaces' />
+      <MainButtonComponent
+        title='See more places'
+        type='bordered'
+        :customStyle='{ height: "40px" }'
+        @click='showMorePlaces'
+      />
     </div>
     <div class="places__cards">
-      <PlaceItemComponent v-for="(item,ind) in getPlanPlaces" :key='ind' :card='item' />
+      <PlaceItemComponent v-for="(item,ind) in getPlaces" :key='ind' :card='item' />
     </div>
   </section>
 </template>
@@ -18,18 +22,19 @@
 import MainButtonComponent from '@/components/MainButtonComponent';
 import PlaceItemComponent from '@/components/PlaceItemComponent';
 import { mapGetters } from 'vuex';
+
 export default {
-  name: 'PlacesPlanComponent',
+  name: 'PlacesComponent',
   components: {
     MainButtonComponent,
     PlaceItemComponent,
   },
   computed: {
-    ...mapGetters('globalContent',['getPlanPlaces'])
+    ...mapGetters('globalContent', ['getPlaces'])
   },
   methods: {
-    UserSeeMorePlaces() {
-      console.log('UserSeeMorePlaces!!!');
+    showMorePlaces() {
+      console.log('showMorePlaces!!!');
     }
   }
 }

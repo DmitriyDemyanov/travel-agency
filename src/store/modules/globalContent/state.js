@@ -119,109 +119,91 @@ export default {
       img: 'istanbul',
       country: 'turkey',
       city: 'istanbul',
-      links:
-      {
+      links: {
         flights: 'https://facebook.com',
         hotels: 'https://twitter.com',
         resorts: 'https://youtube.com',
       }
-
     },
     {
       img: 'sydney',
       country: 'australia',
       city: 'sydney',
-      links:
-      {
+      links: {
         flights: 'https://facebook.com',
         hotels: 'https://twitter.com',
         resorts: 'https://youtube.com',
       }
-
     },
     {
       img: 'baku',
       country: 'azerbaijan',
       city: 'baku',
-      links:
-      {
+      links: {
         flights: 'https://facebook.com',
         hotels: 'https://twitter.com',
         resorts: 'https://youtube.com',
       }
-
     },
     {
       img: 'male',
       country: 'maldives',
       city: 'malé',
-      links:
-      {
+      links: {
         flights: 'https://facebook.com',
         hotels: 'https://twitter.com',
         resorts: 'https://youtube.com',
       }
-
     },
     {
       img: 'paris',
       country: 'france',
       city: 'paris',
-      links:
-      {
+      links: {
         flights: 'https://facebook.com',
         hotels: 'https://twitter.com',
         resorts: 'https://youtube.com',
       }
-
     },
     {
       img: 'new-york',
       country: 'US',
       city: 'new york',
-      links:
-      {
+      links: {
         flights: 'https://facebook.com',
         hotels: 'https://twitter.com',
         resorts: 'https://youtube.com',
       }
-
     },
     {
       img: 'london',
       country: 'UK',
       city: 'london',
-      links:
-      {
+      links: {
         flights: 'https://facebook.com',
         hotels: 'https://twitter.com',
         resorts: 'https://youtube.com',
       }
-
     },
     {
       img: 'tokyo',
       country: 'japan',
       city: 'tokyo',
-      links:
-      {
+      links: {
         flights: 'https://facebook.com',
         hotels: 'https://twitter.com',
         resorts: 'https://youtube.com',
       }
-
     },
     {
       img: 'dubai',
       country: 'UAE',
       city: 'dubai',
-      links:
-      {
+      links: {
         flights: 'https://facebook.com',
         hotels: 'https://twitter.com',
         resorts: 'https://youtube.com',
       }
-
-    },
+    }
   ]
 }

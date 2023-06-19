@@ -3,7 +3,7 @@
     <div class="place__image"><img :src="require(`@/assets/image/photo/${card.img}.png`)" alt="photo"></div>
     <div class="place__content">
       <div class="place__title fz-16 font-color-7"> {{ card.city }}, {{ card.country }} </div>
-      <span class='place__link fz-14'>
+      <span class='place__links fz-14'>
         <a :href="card.links.flights" target="_blank">Flights</a> •
         <a :href="card.links.hotels" target="_blank">Hotels</a> •
         <a :href="card.links.resorts" target="_blank">Resorts</a>
@@ -18,8 +18,8 @@ export default {
   props: {
     card: {
       type: Object,
-      required: true,
-    },
+      required: true
+    }
   }
 }
 </script>
@@ -27,7 +27,7 @@ export default {
 <style lang='scss' scoped>
 .place {
   background: #FFFFFF;
-  box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.05);
+  box-shadow: 0 4px 16px rgba(17, 34, 17, 0.05);
   border-radius: 16px;
   padding: 16px;
 
@@ -50,16 +50,13 @@ export default {
     text-transform: capitalize;
   }
 
-  &__link {
-
+  &__links {
     a {
       margin-right: 8px;
       margin-left: 8px;
-
-    }
-
-    :first-child {
-      margin-left: 0;
+      &:first-child {
+        margin-left: 0;
+      }
     }
   }
 }
