@@ -4,8 +4,9 @@
       <h2 class="welcome__subtitle secondary-font fz-accent-45">Helping Others</h2>
       <h1 class="welcome__title secondary-font">Live & Travel</h1>
       <p class="welcome__text fz-20">Special offers to suit your plan</p>
+      <QuickOrderComponent />
     </div>
-    <QuickOrderComponent />
+
     <PlacesComponent/>
   </section>
 </template>
@@ -40,6 +41,7 @@ export default {
   background-position-y: 60%;
   border-radius: 24px;
   color: #fff;
+  position: relative;
 
   &__title {
     margin-top: 4px;

@@ -55,7 +55,7 @@ export default {
 <style lang='scss' scoped>
 .order {
   position: absolute;
-  bottom: 30px;
+  bottom: -185px;
   right: 0;
   left: 0;
   min-height: 280px;
@@ -63,6 +63,7 @@ export default {
   box-shadow: 0 4px 16px rgba(141, 211, 187, 0.15);
   border-radius: 16px;
   padding: 16px 16px 32px 32px;
+  color: var(--main-color-font);
 
   &__tab {
     padding-top: 14px;
