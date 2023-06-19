@@ -56,9 +56,10 @@ export default {
   }
 
   &:hover {
-    scale: 1.02;
+    background-size: 110%;
+    /* scale: 1.02; */
   }
-
+  
 
   &__title {
     margin-bottom: 8px;
