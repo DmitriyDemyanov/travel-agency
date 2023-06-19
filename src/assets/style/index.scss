@@ -82,6 +82,11 @@ html {
   font-size: 20px;
   line-height: 24px;
 }
+.fz-32 {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+}
 
 // У нас нет такого шрифта "TradeGothic LT Extended", мы назвали шрифт "TradeGothic". Файл _fonts.scc, Line2, Line 9
 // Предлагаю сделать клас для переключения шрифтов (secondary-font)

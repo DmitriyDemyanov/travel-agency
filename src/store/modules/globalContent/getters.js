@@ -9,5 +9,4 @@ export default {
   getLandingNavigations(state) {
     return state.landingNavigations;
   }
-
 }

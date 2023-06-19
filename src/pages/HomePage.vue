@@ -1,22 +1,27 @@
 <template>
-  <section>
-    <div class="main-page">
-      <div class="welcome">
-        <h2 class="welcome__subtitle secondary-font fz-accent-45">Helping Others</h2>
-        <h1 class="welcome__title secondary-font">Live & Travel</h1>
-        <p class="welcome__text fz-20">Special offers to suit your plan</p>
-      </div>
+  <section class="main-page">
+    <div class="welcome">
+      <h2 class="welcome__subtitle secondary-font fz-accent-45">Helping Others</h2>
+      <h1 class="welcome__title secondary-font">Live & Travel</h1>
+      <p class="welcome__text fz-20">Special offers to suit your plan</p>
+      <QuickOrderComponent />
     </div>
+    <PlacesComponent/>
     <LandingNavigationComponent />
   </section>
 </template>
 
 <script>
+import QuickOrderComponent from '@/components/QuickOrderComponent';
+import PlacesComponent from '@/components/PlacesComponent';
 import LandingNavigationComponent from '@/components/LandingNavigationComponent';
+
 export default {
   name: 'HomePage',
   components: {
-    LandingNavigationComponent,
+    QuickOrderComponent,
+    PlacesComponent,
+    LandingNavigationComponent
   }
 }
 </script>
@@ -37,6 +42,7 @@ export default {
   background-position-y: 60%;
   border-radius: 24px;
   color: #fff;
+  position: relative;
 
   &__title {
     margin-top: 4px;
@@ -56,7 +62,7 @@ export default {
 
   &__text {
     margin-top: 16px;
-    // у нас уже установлен 'Montserrat' как main font, удалил дубликат
+
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;

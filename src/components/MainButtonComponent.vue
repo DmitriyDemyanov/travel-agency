@@ -1,6 +1,10 @@
 <template>
-  <button class="main-button" :class='[`size-${size}`,`color-${color}`,`type-${type}`]' :style="customStyle"
-    @click='$emit("click")'>
+  <button
+      class="main-button"
+      :class='[`size-${size}`,`color-${color}`,`type-${type}`]'
+      :style="customStyle"
+      @click='$emit("click")'
+  >
     <slot name='prepend'></slot>
     <span v-show="title" class="fz-14" :class='titleClasses'>
       {{ title }}
@@ -85,6 +89,13 @@ export default {
 
     &:hover {
       color: var(--accent-color);
+
+      svg {
+        path {
+          transition: all 0.3s;
+          stroke: var(--accent-color);
+        }
+      }
     }
   }
 
@@ -125,4 +136,5 @@ export default {
     background-color: var(--accent-color);
   }
 }
+
 </style>
