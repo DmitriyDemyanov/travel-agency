@@ -3,11 +3,13 @@ export default {
   getSocialMedia(state) {
     return state.socialMedia
   },
-  getfooterLinks(state) {
+  getFooterLinks(state) {
     return state.footerLinks;
   },
-  //________________________________PLAN_PLACES
+  getLandingNavigations(state) {
+    return state.landingNavigations;
+  },
   getPlaces(state) {
-    return state.planPlaces;
+    return state.places;
   }
 }

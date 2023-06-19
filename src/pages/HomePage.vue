@@ -6,20 +6,22 @@
       <p class="welcome__text fz-20">Special offers to suit your plan</p>
       <QuickOrderComponent />
     </div>
-
     <PlacesComponent/>
+    <LandingNavigationComponent />
   </section>
 </template>
 
 <script>
 import QuickOrderComponent from '@/components/QuickOrderComponent';
 import PlacesComponent from '@/components/PlacesComponent';
+import LandingNavigationComponent from '@/components/LandingNavigationComponent';
 
 export default {
   name: 'HomePage',
   components: {
     QuickOrderComponent,
-    PlacesComponent
+    PlacesComponent,
+    LandingNavigationComponent
   }
 }
 </script>
@@ -27,7 +29,6 @@ export default {
 <style lang='scss' scoped>
 .main-page {
   padding: var(--main-block-padding);
-  position: relative;
 }
 
 .welcome {

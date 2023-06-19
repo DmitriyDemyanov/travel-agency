@@ -113,8 +113,24 @@ export default {
       ],
     },
   ],
-  //_______________________________________PLAN-PLACES
-  planPlaces: [
+  //_________________________________________PageItemNavigation
+  landingNavigations: [
+    {
+      title: 'Flights',
+      subtitle: 'Search Flights & Places Hire to our most popular destinations',
+      textBtn: 'Show Flights',
+      bg: 'flights',
+      route: '/flights'
+    },
+    {
+      title: 'Hotels',
+      subtitle: 'Search Flights & Places Hire to our most popular destinations',
+      textBtn: 'Show Hotels',
+      bg: 'hotels',
+      route: '/hotels'
+    }
+  ],
+  places: [
     {
       img: 'istanbul',
       country: 'turkey',

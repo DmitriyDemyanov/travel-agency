@@ -46,6 +46,7 @@ html {
     font-size: 20px;
     line-height: 25px;
   }
+ 
   &.fz-44 {
     font-weight: 700;
     font-size: 44px;
@@ -93,6 +94,11 @@ html {
 
 .secondary-font {
   font-family: var(--secondary-font);
+   &.fz-40{ 
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 51px;
+  }
 }
 
 .fz-accent-45 {
