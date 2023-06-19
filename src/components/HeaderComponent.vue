@@ -41,10 +41,12 @@
 
 <script>
 import MainButtonComponent from '@/components/MainButtonComponent';
+
 export default {
   name: 'HeaderComponent',
   components: {
     MainButtonComponent,
+   
   },
   data() {
     return {
