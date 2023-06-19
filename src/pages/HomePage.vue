@@ -4,24 +4,27 @@
       <h2 class="welcome__subtitle secondary-font fz-accent-45">Helping Others</h2>
       <h1 class="welcome__title secondary-font">Live & Travel</h1>
       <p class="welcome__text fz-20">Special offers to suit your plan</p>
+      <QuickOrderComponent />
     </div>
-    <QuickOrderComponent />
+
+    <PlacesComponent/>
   </section>
 </template>
 
 <script>
 import QuickOrderComponent from '@/components/QuickOrderComponent';
+import PlacesComponent from '@/components/PlacesComponent';
+
 export default {
   name: 'HomePage',
   components: {
     QuickOrderComponent,
+    PlacesComponent
   }
 }
 </script>
 
 <style lang='scss' scoped>
-// Используй или " или '. Прими решение, какие кавычки мы будем использовать в проекте как основные и мне тоже скажи,
-// чтобы я не косячил. Можем определить для каждого из блоков - для template, script, style
 .main-page {
   padding: var(--main-block-padding);
   position: relative;
@@ -38,6 +41,7 @@ export default {
   background-position-y: 60%;
   border-radius: 24px;
   color: #fff;
+  position: relative;
 
   &__title {
     margin-top: 4px;
