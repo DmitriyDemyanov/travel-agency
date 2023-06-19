@@ -8,5 +8,8 @@ export default {
   },
   getLandingNavigations(state) {
     return state.landingNavigations;
+  },
+  getPlaces(state) {
+    return state.places;
   }
 }

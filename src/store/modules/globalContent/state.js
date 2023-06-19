@@ -130,7 +130,7 @@ export default {
       route: '/hotels'
     }
   ],
-  planPlaces: [
+  places: [
     {
       img: 'istanbul',
       country: 'turkey',
