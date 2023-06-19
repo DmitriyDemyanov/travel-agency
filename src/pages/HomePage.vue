@@ -1,18 +1,21 @@
 <template>
-  <section>
-    <div class="main-page">
-      <div class="welcome">
-        <h2 class="welcome__subtitle secondary-font fz-accent-45">Helping Others</h2>
-        <h1 class="welcome__title secondary-font">Live & Travel</h1>
-        <p class="welcome__text fz-20">Special offers to suit your plan</p>
-      </div>
+  <section class="main-page">
+    <div class="welcome">
+      <h2 class="welcome__subtitle secondary-font fz-accent-45">Helping Others</h2>
+      <h1 class="welcome__title secondary-font">Live & Travel</h1>
+      <p class="welcome__text fz-20">Special offers to suit your plan</p>
     </div>
+    <QuickOrderComponent />
   </section>
 </template>
 
 <script>
+import QuickOrderComponent from '@/components/QuickOrderComponent';
 export default {
-  name: 'HomePage'
+  name: 'HomePage',
+  components: {
+    QuickOrderComponent,
+  }
 }
 </script>
 
@@ -21,6 +24,7 @@ export default {
 // чтобы я не косячил. Можем определить для каждого из блоков - для template, script, style
 .main-page {
   padding: var(--main-block-padding);
+  position: relative;
 }
 
 .welcome {
@@ -53,7 +57,7 @@ export default {
 
   &__text {
     margin-top: 16px;
-    // у нас уже установлен 'Montserrat' как main font, удалил дубликат
+
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
