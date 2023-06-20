@@ -1,14 +1,11 @@
 <template>
   <section class="wrapper-input">
     <label class="label-input fz-14" for="main-input">{{ labelText }}</label>
-    <input
-        type="text"
-        name="main-input"
-        :class='`type-${type}`'
-        :placeholder="`${placeholder}`"
-        :value="value" class="main-input fz-16"
-        @input="onInput($event)"
-    >
+    <div class="prepend-slot">
+      <slot name="prepend"></slot>
+    </div>
+    <input type="text" name="main-input" :class='`type-${type} ${paddingLeft}`' :placeholder="`${placeholder}`"
+      :value="value" class="main-input fz-16" @input="onInput($event)">
     <div class="append-slot" @click="onClickIcon">
       <slot name="append"></slot>
     </div>
@@ -38,6 +35,14 @@ export default {
     value: {
       type: String,
       default: ""
+    }
+  },
+  computed: {
+    paddingLeft() {
+      if (this.$slots.prepend) {
+        return 'p-left'
+      }
+      return ''
     }
   },
   methods: {
@@ -87,9 +92,21 @@ export default {
   top: 50%;
   transform: translateY(-50%);
   right: 17px;
+  cursor: pointer;
+}
+
+.prepend-slot {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 17px;
 }
 
 .type-no-bordered {
   border: none;
+}
+
+.p-left {
+  padding-left: 48px;
 }
 </style>

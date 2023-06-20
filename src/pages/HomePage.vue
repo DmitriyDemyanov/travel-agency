@@ -6,8 +6,9 @@
       <p class="welcome__text fz-20">Special offers to suit your plan</p>
       <QuickOrderComponent />
     </div>
-    <PlacesComponent/>
+    <PlacesComponent />
     <LandingNavigationComponent />
+    <ReviewsComponent />
   </section>
 </template>
 
@@ -16,12 +17,15 @@ import QuickOrderComponent from '@/components/QuickOrderComponent';
 import PlacesComponent from '@/components/PlacesComponent';
 import LandingNavigationComponent from '@/components/LandingNavigationComponent';
 
+import ReviewsComponent from '@/components/ReviewsComponent';
+
 export default {
   name: 'HomePage',
   components: {
     QuickOrderComponent,
     PlacesComponent,
-    LandingNavigationComponent
+    LandingNavigationComponent,
+    ReviewsComponent,
   }
 }
 </script>
