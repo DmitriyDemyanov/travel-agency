@@ -4,9 +4,7 @@
     <SectionHeaderComponent
       :sectionContent='{ title: "Reviews",subtitle: "What people says about Golobe facilities",textBtn: "See All" }' />
     <div class="d-flex">
-      <ReviewItemComponent />
-      <ReviewItemComponent />
-      <ReviewItemComponent />
+      <ReviewItemComponent v-for='(el,ind) in getReviewsItems' :key='ind' :card='el' />
     </div>
   </section>
 </template>
@@ -14,11 +12,15 @@
 <script>
 import ReviewItemComponent from '@/components/ReviewItemComponent';
 import SectionHeaderComponent from '@/components/SectionHeaderComponent';
+import { mapGetters } from 'vuex';
 export default {
   name: 'ReviewsComponent',
   components: {
     ReviewItemComponent,
     SectionHeaderComponent,
+  },
+  computed: {
+    ...mapGetters('globalContent',['getReviewsItems'])
   }
 }
 </script>
@@ -28,4 +30,6 @@ export default {
   padding-top: 70px;
   padding-bottom: 90px;
 }
+
+
 </style>

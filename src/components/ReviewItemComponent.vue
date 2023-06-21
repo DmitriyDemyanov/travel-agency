@@ -1,31 +1,25 @@
 <template>
   <section class="review">
-    <div class="review__border"></div>
-    <div class="review__title secondary-font fz-24">“A real sense of community, nurtured”
+    <div class="review__frame"></div>
+    <div class="review__title secondary-font fz-24">{{ card.title }}
     </div>
-    <div class="review__subtitle fz-14 font-color-5">Really appreciate the help and support from the staff during these
-      tough times. Shutout
-      to Katie for helping me always, even when I was out of the country. And always available when needed.
-    </div>
-    <a href="" class="review__more secondary-font fz-16">View more</a>
+    <div class="review__subtitle fz-14 font-color-5"> {{ card.subtitle }}</div>
+    <a :href="card.link" target="_blank" class="review__more secondary-font fz-16">View more</a>
     <div class="review__stars d-flex">
-      <div class="item__star"><img src="@/assets/image/icons/yellow-star.svg" alt="icon"></div>
-      <div class="item__star"><img src="@/assets/image/icons/yellow-star.svg" alt="icon"></div>
-      <div class="item__star"><img src="@/assets/image/icons/yellow-star.svg" alt="icon"></div>
-      <div class="item__star"><img src="@/assets/image/icons/yellow-star.svg" alt="icon"></div>
-      <div class="item__star"><img src="@/assets/image/icons/yellow-star.svg" alt="icon"></div>
+      <div class="item__star" v-for="ind in Number(card.rating) " :key='ind'><img
+          src="@/assets/image/icons/yellow-star.svg" alt="icon"></div>
     </div>
-    <div class="review__user_name secondary-font fz-14">Olga</div>
-    <div class="review__user_description fz-12 font-color-5">Weave Studios – Kai Tak</div>
+    <div class="review__user_name secondary-font fz-14">{{ card.userName }}</div>
+    <div class="review__user_description fz-12 font-color-5">{{ card.userDescription }}</div>
 
 
     <div>
-      <img src="@/assets/image/icons/icon-google.svg" alt="">
-      <span class="icon-text secondary-font fz-12 font-color-4">Google</span>
+      <img :src="require(`@/assets/image/icons/${card.icon}.svg`)" alt="">
+      <span class="icon-text secondary-font fz-12 font-color-4">{{ card.iconName }}</span>
     </div>
 
     <div class="review__photo">
-      <img src="@/assets/image/photo/review-image-1.png" alt="">
+      <a :href="card.link" target="_blank"><img :src="require(`@/assets/image/photo/${card.image}.png`)" alt="photo"></a>
     </div>
 
   </section>
@@ -33,7 +27,13 @@
 
 <script>
 export default {
-  name: 'ReviewItemComponent'
+  name: 'ReviewItemComponent',
+  props: {
+    card: {
+      type: Object,
+      required: true,
+    },
+  }
 }
 </script>
 
@@ -48,7 +48,7 @@ export default {
   box-shadow: 2px 4px 16px rgba(17, 34, 17, 0.1);
   border-radius: 20px;
 
-  &__border {
+  &__frame {
     position: absolute;
     width: 425px;
     height: 586px;
@@ -78,10 +78,6 @@ export default {
     margin-bottom: 18px;
   }
 
-  &__image {
-    justify-content: end;
-  }
-
   &__stars {
     margin-bottom: 22px;
   }
@@ -101,6 +97,19 @@ export default {
 
   &__photo {
     margin-top: 44px;
+    transition: all 0.4s;
+
+    img {
+      width: 377px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    :hover {
+      scale: 1.1;
+
+    }
   }
 }
 </style>
