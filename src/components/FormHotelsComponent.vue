@@ -8,23 +8,19 @@
         </template>
       </MainInputComponent>
 
-      <MainInputComponent placeholder='Fri 12/2' labelText='Check In' v-model="order.checkIn">
+      <MainInputComponent placeholder='Check In Date' labelText='Check In' v-model="order.checkIn">
         <template #append>
           <img src="@/assets/image/icons/icon-calendar.svg" alt="icon">
         </template>
       </MainInputComponent>
 
-      <MainInputComponent placeholder='Sun 12/4' labelText='Check Out' v-model="order.checkOut">
+      <MainInputComponent placeholder='Check Out Date' labelText='Check Out' v-model="order.checkOut">
         <template #append>
           <img src="@/assets/image/icons/icon-calendar.svg" alt="icon">
         </template>
-
-
       </MainInputComponent>
 
-
-
-      <MainInputComponent placeholder='1 room, 2 guests' labelText='Rooms & Guests' v-model="order.roomsAndGuests">
+      <MainInputComponent placeholder='Select' labelText='Rooms & Guests' v-model="order.roomsAndGuests">
         <template #prepend>
           <img src="@/assets/image/icons/icon-user.svg" alt="icon">
         </template>

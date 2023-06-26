@@ -10,7 +10,6 @@ html {
   body {
     font-family: var(--primary-font);
     color: var(--main-color-dark);
-    // У нас есть соотвтетствующая переменная
     background-color: var(bg-color);
     --bs-body-font-family: var(--primary-font);
   }
@@ -19,7 +18,6 @@ html {
     margin: 0;
   }
 
-  // Вынес на глобальный уровень и привязал к переменной, чтобы каждый раз не менять
   a {
     --bs-link-color: var(--main-color-font);
     text-decoration: none;
@@ -31,22 +29,21 @@ html {
   }
 }
 
-
-
 // ----- FONTS -----
-// Бардак, нужно подумать как упорядочить, сделаю тикет на себя
 .title-ff {
   font-family: 'TradeGothic', sans-serif;
+
   &.fz-16 {
     font-weight: 700;
     font-size: 16px;
   }
+
   &.fz-20 {
     font-weight: 700;
     font-size: 20px;
     line-height: 25px;
   }
- 
+
   &.fz-44 {
     font-weight: 700;
     font-size: 44px;
@@ -57,12 +54,15 @@ html {
 .font-color-8 {
   opacity: 0.8;
 }
+
 .font-color-7 {
   opacity: 0.7;
 }
+
 .font-color-5 {
   opacity: 0.5;
 }
+
 .font-color-4 {
   opacity: 0.4;
 }
@@ -72,71 +72,74 @@ html {
   font-size: 12px;
   line-height: 15px;
 }
+
 .fz-14 {
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
 }
+
 .fz-16 {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
 }
+
 .fz-20 {
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
 }
+
 .fz-32 {
   font-weight: 600;
   font-size: 32px;
   line-height: 39px;
 }
 
-// У нас нет такого шрифта "TradeGothic LT Extended", мы назвали шрифт "TradeGothic". Файл _fonts.scc, Line2, Line 9
-// Предлагаю сделать клас для переключения шрифтов (secondary-font)
-// _______________________________________________Font-size ---TradeGothic LT Extended
-
+// _______________________________________________Font-size
 .secondary-font {
   font-family: var(--secondary-font);
+
   &.fz-12 {
     font-weight: 700;
     font-size: 12px;
     line-height: 15px;
   }
+
   &.fz-14 {
     font-weight: 700;
     font-size: 14px;
     line-height: 18px;
   }
+
   &.fz-16 {
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
   }
-   &.fz-24 {
+
+  &.fz-24 {
     font-weight: 700;
     font-size: 24px;
     line-height: 30px;
   }
-   &.fz-40{ 
+
+  &.fz-40 {
     font-weight: 700;
     font-size: 40px;
     line-height: 51px;
   }
- 
-  
 }
 
 .fz-accent-45 {
-  font-family: "TradeGothic", sans-serif ;
+  font-family: "TradeGothic", sans-serif;
   font-weight: 700;
   font-size: 45px;
   line-height: 57px;
 }
 
 // ----- COMMON -----
-
 .container-normal {
   width: 1232px;
   margin: 0 auto;

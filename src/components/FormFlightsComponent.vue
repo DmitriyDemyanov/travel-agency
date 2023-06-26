@@ -29,7 +29,7 @@
       />
 
       <MainInputComponent
-          placeholder='1 Passenger, Economy'
+          placeholder='Seats and Class'
           labelText='Passenger - Class'
           v-model="order.passengerClass"
       />
