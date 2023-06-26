@@ -221,5 +221,41 @@ export default {
         resorts: 'https://youtube.com',
       }
     }
-  ]
+  ],
+  //______________________________________Reviews-component
+  reviewsItems: [
+    {
+      title: '“A real sense of community, nurtured”',
+      subtitle: 'Really appreciate the help and support from the staff during these tough times. Shutout to Katie for helping me always, even when I was out of the country. And always available when needed.',
+      link: 'https://facebook.com',
+      rating: '4',
+      userName: 'Olga',
+      userDescription: 'Weave Studios – Kai Tak',
+      icon: 'icon-google',
+      iconName: 'Google',
+      image: 'nature-1',
+    },
+    {
+      title: '“The facilities are superb. Clean, slick, bright.”',
+      subtitle: '“A real sense of community, nurtured”Really appreciate the help and support from the staff during these tough times. Shoutout to Katie for helping me always, even when I was out of the country. And always available when needed.View moreOlgaWeave Studios – Kai TakGoogle',
+      link: 'https://twitter.com',
+      rating: '5',
+      userName: 'Thomas',
+      icon: 'icon-google',
+      iconName: 'Google',
+      userDescription: 'Weave Studios – Olympic',
+      image: 'nature-2',
+    },
+    {
+      title: '“A real sense of community, nurtured”',
+      subtitle: 'Really appreciate the help and support from the staff during these tough times. Shutout to Katie for helping me always, even when I was out of the country. And always available when needed.',
+      link: 'https://youtube.com',
+      rating: '3',
+      userName: 'Eliot',
+      userDescription: 'Weave Studios – Kai Tak',
+      icon: 'icon-google',
+      iconName: 'Google',
+      image: 'nature-3',
+    },
+  ],
 }

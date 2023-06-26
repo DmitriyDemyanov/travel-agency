@@ -11,5 +11,9 @@ export default {
   },
   getPlaces(state) {
     return state.places;
-  }
+  },
+  //_______________________________Reviews-Items
+  getReviewsItems(state) {
+    return state.reviewsItems
+  },
 }

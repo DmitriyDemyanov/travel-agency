@@ -11,8 +11,6 @@
         <div class="subscribe__input">
           <MainInputComponent type="no-bordered" placeholder="Your email address" v-model="email" />
         </div>
-        <!-- Переделал тут на MainButtonComponent -->
-        <!-- ToDo - У нас родитель не знает, что в MainButtonComponent произошел клик. Создал тикет. -->
         <MainButtonComponent title="Subscribe" color="dark" :custom-style="{ height: 'auto' }" @click="onSubscribe" />
       </div>
 

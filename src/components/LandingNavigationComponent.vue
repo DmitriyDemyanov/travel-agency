@@ -18,8 +18,6 @@ export default {
   computed: {
     ...mapGetters('globalContent', ['getLandingNavigations'])
   },
-
-
 }
 </script>
 
