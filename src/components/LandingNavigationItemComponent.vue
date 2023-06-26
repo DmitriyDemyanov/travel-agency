@@ -32,7 +32,8 @@ export default {
   width: 100%;
   min-height: 560px;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
+  background-position: center;
   border-radius: 20px;
   text-align: center;
   padding: 24px;
@@ -41,7 +42,7 @@ export default {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  transition: all 0.3s;
+  transition: background-size .3s ease-in-out;
 
   &.flights {
     background-image: url('@/assets/image/photo/bg-flights.png');
@@ -49,17 +50,15 @@ export default {
 
   &.hotels {
     background-image: url('@/assets/image/photo/bg-hotels.png');
-    transition: all 1s;
   }
 
   &:hover {
-    background-size: 110%;
-
+    background-size: 110% 110%;
+    transition-duration: 3s;
   }
 
   &__title {
     margin-bottom: 8px;
-
   }
 
   &__description {
