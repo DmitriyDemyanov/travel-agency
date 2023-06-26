@@ -1,0 +1,92 @@
+[
+    {
+        "img":     "http://localhost:3579/images/landing/places/istanbul.png",
+        "country": "turkey",
+        "city":    "istanbul",
+        "links":   {
+            "flights": "https://facebook.com",
+            "hotels":  "https://twitter.com",
+            "resorts": "https://youtube.com"
+        }
+    },
+    {
+        "img":     "http://localhost:3579/images/landing/places/sydney.png",
+        "country": "australia",
+        "city":    "sydney",
+        "links":   {
+            "flights": "https://facebook.com",
+            "hotels":  "https://twitter.com",
+            "resorts": "https://youtube.com"
+        }
+    },
+    {
+        "img":     "http://localhost:3579/images/landing/places/baku.png",
+        "country": "azerbaijan",
+        "city":    "baku",
+        "links":   {
+            "flights": "https://facebook.com",
+            "hotels":  "https://twitter.com",
+            "resorts": "https://youtube.com"
+        }
+    },
+    {
+        "img":     "http://localhost:3579/images/landing/places/male.png",
+        "country": "maldives",
+        "city":    "malé",
+        "links":   {
+            "flights": "https://facebook.com",
+            "hotels":  "https://twitter.com",
+            "resorts": "https://youtube.com"
+        }
+    },
+    {
+        "img":     "http://localhost:3579/images/landing/places/paris.png",
+        "country": "france",
+        "city":    "paris",
+        "links":   {
+            "flights": "https://facebook.com",
+            "hotels":  "https://twitter.com",
+            "resorts": "https://youtube.com"
+        }
+    },
+    {
+        "img":     "http://localhost:3579/images/landing/places/new-york.png",
+        "country": "US",
+        "city":    "new york",
+        "links":   {
+            "flights": "https://facebook.com",
+            "hotels":  "https://twitter.com",
+            "resorts": "https://youtube.com"
+        }
+    },
+    {
+        "img":     "http://localhost:3579/images/landing/places/london.png",
+        "country": "UK",
+        "city":    "london",
+        "links":   {
+            "flights": "https://facebook.com",
+            "hotels":  "https://twitter.com",
+            "resorts": "https://youtube.com"
+        }
+    },
+    {
+        "img":     "http://localhost:3579/images/landing/places/tokyo.png",
+        "country": "japan",
+        "city":    "tokyo",
+        "links":   {
+            "flights": "https://facebook.com",
+            "hotels":  "https://twitter.com",
+            "resorts": "https://youtube.com"
+        }
+    },
+    {
+        "img":     "http://localhost:3579/images/landing/places/dubai.png",
+        "country": "UAE",
+        "city":    "dubai",
+        "links":   {
+            "flights": "https://facebook.com",
+            "hotels":  "https://twitter.com",
+            "resorts": "https://youtube.com"
+        }
+    }
+]
