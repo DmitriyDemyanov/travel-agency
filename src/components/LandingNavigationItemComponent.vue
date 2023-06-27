@@ -45,11 +45,11 @@ export default {
   transition: background-size .3s ease-in-out;
 
   &.flights {
-    // background-image: url('@/server/public/images/landing/navigations/bg-flights.png');
+     background-image: url('@/assets/image/photo-dis/bg-flights.png');
   }
 
   &.hotels {
-    // background-image: url('@/server/public/images/landing/navigations/bg-hotels.png');
+     background-image: url('@/assets/image/photo-dis/bg-hotels.png');
   }
 
   &:hover {
