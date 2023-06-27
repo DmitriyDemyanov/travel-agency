@@ -2,7 +2,7 @@
   <section class="reviews-wrapper container-normal ">
 
     <SectionHeaderComponent
-      :sectionContent='{ title: "Reviews",subtitle: "What people says about Golobe facilities",textBtn: "See All" }' />
+      :sectionContent='{ title: "Reviews",subtitle: "What people says about Globe facilities",textBtn: "See All" }' />
     <div class="d-flex">
       <ReviewItemComponent v-for='(el,ind) in getReviewsItems' :key='ind' :card='el' />
     </div>
