@@ -1,91 +1,91 @@
 [
     {
         "title": "Our Destinations",
-        "links": [
+        "items": [
             {
-                "textLink": "Canada",
-                "link":     "#"
+                "text": "Canada",
+                "path": "/"
             },
             {
-                "textLink": "Alaska",
-                "link":     "#"
+                "text": "Alaska",
+                "path": "/"
             },
             {
-                "textLink": "France",
-                "link":     "#"
+                "text": "France",
+                "path": "/"
             },
             {
-                "textLink": "Iceland",
-                "link":     "#"
+                "text": "Iceland",
+                "path": "/"
             }
         ]
     },
     {
         "title": "Our Activities",
-        "links": [
+        "items": [
             {
-                "textLink": "Northern Lights",
-                "link":     "#"
+                "text": "Northern Lights",
+                "path": "/"
             },
             {
-                "textLink": "Cruising & sailing",
-                "link":     "#"
+                "text": "Cruising & sailing",
+                "path": "/"
             },
             {
-                "textLink": "Multi-activities",
-                "link":     "#"
+                "text": "Multi-activities",
+                "path": "/"
             },
             {
-                "textLink": "Kayaking",
-                "link":     "#"
+                "text": "Kayaking",
+                "path": "/"
             }
         ]
     },
     {
         "title": "Travel Blogs",
-        "links": [
+        "items": [
             {
-                "textLink": "Bali Travel Guide",
-                "link":     "#"
+                "text": "Bali Travel Guide",
+                "path": "/"
             },
             {
-                "textLink": "Sri Links Travel Guide",
-                "link":     "#"
+                "text": "Sri Links Travel Guide",
+                "path": "/"
             },
             {
-                "textLink": "Peru Travel Guide",
-                "link":     "#"
+                "text": "Peru Travel Guide",
+                "path": "/"
             },
             {
-                "textLink": "Bali Travel Guide",
-                "link":     "#"
+                "text": "Bali Travel Guide",
+                "path": "/"
             }
         ]
     },
     {
         "title": "about Us",
-        "links": [
+        "items": [
             {
-                "textLink": "Our Story",
-                "link":     "#"
+                "text": "Our Story",
+                "path": "/"
             },
             {
-                "textLink": "Work with us",
-                "link":     "#"
+                "text": "Work with us",
+                "path": "/"
             }
 
         ]
     },
     {
         "title": "Contact Us",
-        "links": [
+        "items": [
             {
-                "textLink": "Our Story",
-                "link":     "#"
+                "text": "Our Story",
+                "path": "/"
             },
             {
-                "textLink": "Work with us",
-                "link":     "#"
+                "text": "Work with us",
+                "path": "/"
             }
 
         ]
