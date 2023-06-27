@@ -1,6 +1,6 @@
 <template>
   <section class='place d-flex align-items-center'>
-    <div class="place__image"><img :src="require(`@/assets/image/photo/${card.img}.png`)" alt="photo"></div>
+    <div class="place__image"><img :src="require(`@/assets/image/photo-dis/${card.img}.png`)" alt="photo"></div>
     <div class="place__content">
       <div class="place__title fz-16 font-color-7"> {{ card.city }}, {{ card.country }} </div>
       <span class='place__links fz-14'>

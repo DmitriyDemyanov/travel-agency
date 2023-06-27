@@ -21,7 +21,7 @@
     </div>
 
     <div class="review__photo">
-      <a :href="card.link" target="_blank"><img :src="require(`@/assets/image/photo/${card.image}.png`)" alt="photo"></a>
+      <a :href="card.link" target="_blank"><img :src="require(`@/assets/image/photo-dis/${card.image}.png`)" alt="photo"></a>
     </div>
 
   </section>
