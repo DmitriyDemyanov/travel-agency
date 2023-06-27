@@ -27,7 +27,7 @@ export default {
 <style lang='scss' scoped>
 .place {
   background: #FFFFFF;
-  box-shadow: 0 4px 16px rgba(17, 34, 17, 0.05);
+  box-shadow: 0 4px 16px rgba(17, 34, 17, 0.2);
   border-radius: 16px;
   padding: 16px;
 

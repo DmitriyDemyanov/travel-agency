@@ -60,7 +60,7 @@ export default {
   left: 0;
   min-height: 280px;
   background-color: #FFFFFF;
-  box-shadow: 0 4px 16px rgba(141, 211, 187, 0.15);
+  box-shadow: 0 4px 8px rgba(141, 211, 187, 0.35);
   border-radius: 16px;
   padding: 16px 16px 32px 32px;
   color: var(--main-color-font);
