@@ -20,8 +20,8 @@ export default {
     SectionHeaderComponent,
   },
   computed: {
-    ...mapGetters('globalContent',['getReviewsItems'])
-  }
+    ...mapGetters('globalContent',['getReviewsItems']),
+  },
 }
 </script>
 
