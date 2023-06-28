@@ -1,9 +1,10 @@
 <template>
   <div class="footer__navigation">
     <div class="footer__navigation_title  title-ff fz-16">{{ links.title }}</div>
-    <a :href="el.link" class="footer__navigation_link font-color-7  fz-14" v-for="(el,ind) in links.links" :key='ind'>
-      {{ el.textLink }}
-    </a>
+    <router-link :to='el.path' class="footer__navigation_link font-color-7  fz-14" v-for="(el,ind) in links.items"
+      :key='ind'>
+      {{ el.text }}
+    </router-link>
   </div>
 </template>
 

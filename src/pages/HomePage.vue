@@ -26,7 +26,8 @@ export default {
     PlacesComponent,
     LandingNavigationComponent,
     ReviewsComponent,
-  }
+  },
+ 
 }
 </script>
 

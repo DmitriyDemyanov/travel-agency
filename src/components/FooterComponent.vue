@@ -11,10 +11,11 @@
           </a>
         </div>
       </div>
-      <FooterMenuComponent :links='el' v-for="(el,ind) in getFooterLinks" :key='ind' />
+      <FooterMenuComponent :links='el' v-for="(el,ind) in getFooterLinks" :key='ind' v-show="getFooterLinks" />
+      <div v-show="!getFooterLinks.length"> {{ getErrorMessage }} </div>
     </div>
     <SiteSubscribeComponent />
-   
+
   </section>
 </template>
 
@@ -32,8 +33,9 @@ export default {
     ...mapGetters("globalContent",[
       'getSocialMedia',
       'getFooterLinks',
+      'getErrorMessage',
     ])
-  }
+  },
 };
 </script>
 
