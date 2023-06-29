@@ -19,5 +19,10 @@ export default {
   //______________________________________errorMessage
   getErrorMessage(state) {
     return state.errorMessage
+  },
+  //______________________________________landingNavigation
+  getLandingNavigation(state) {
+    return state.landingNavigation;
   }
+
 }

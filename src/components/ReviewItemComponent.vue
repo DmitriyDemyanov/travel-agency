@@ -2,7 +2,7 @@
   <section class="review">
 
     <div class="review__title secondary-font fz-24">{{ card.title }}</div>
-    <div class="review__subtitle fz-14 font-color-5"> {{ card.subtitle }}</div>
+    <div class="review__subtitle fz-14 font-color-5"> {{ card.review }}</div>
 
     <a :href="card.link" target="_blank" class="review__link secondary-font fz-16">View more</a>
 
@@ -12,16 +12,16 @@
       </div>
     </div>
 
-    <div class="secondary-font fz-14">{{ card.userName }}</div>
-    <div class="review__description fz-12 font-color-5">{{ card.userDescription }}</div>
+    <div class="secondary-font fz-14">{{ card.user }}</div>
+    <div class="review__description fz-12 font-color-5">{{ card.subject }}</div>
 
     <div>
-      <img :src="require(`@/assets/image/icons/${card.icon}.svg`)" alt="">
-      <span class="icon-text secondary-font fz-12 font-color-4">{{ card.iconName }}</span>
+      <img :src="require(`@/assets/image/icons/icon-google.svg`)" alt="icon">
+      <span class="icon-text secondary-font fz-12 font-color-4">Google</span>
     </div>
 
     <div class="review__photo">
-      <a :href="card.link" target="_blank"><img :src="require(`@/assets/image/photo-dis/${card.image}.png`)" alt="photo"></a>
+      <a :href="card.link" target="_blank"><img :src="card.image" alt="photo"></a>
     </div>
 
   </section>
@@ -29,10 +29,10 @@
 
 <script>
 export default {
-  name:  "ReviewItemComponent",
+  name: "ReviewItemComponent",
   props: {
     card: {
-      type:     Object,
+      type: Object,
       required: true
     }
   }
@@ -41,13 +41,13 @@ export default {
 
 <style lang='scss' scoped>
 .review {
-  position:      relative;
-  min-width:     425px;
-  height:        584px;
-  margin-right:  50px;
-  padding:       24px;
-  background:    #FFFFFF;
-  box-shadow:    2px 4px 16px rgba(17, 34, 17, 0.1), 25px 22px 0 rgba(141, 211, 187, 0.4);
+  position: relative;
+  min-width: 425px;
+  height: 584px;
+  margin-right: 50px;
+  padding: 24px;
+  background: #FFFFFF;
+  box-shadow: 2px 4px 16px rgba(17, 34, 17, 0.1), 25px 22px 0 rgba(141, 211, 187, 0.4);
   border-radius: 20px;
 
   &__title {
@@ -55,17 +55,17 @@ export default {
   }
 
   &__subtitle {
-    margin-bottom:      12px;
-    display:            -webkit-box;
+    margin-bottom: 12px;
+    display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    overflow:           hidden;
-    text-overflow:      ellipsis;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &__link {
-    display:       block;
-    text-align:    end;
+    display: block;
+    text-align: end;
     margin-bottom: 18px;
   }
 
@@ -74,7 +74,7 @@ export default {
   }
 
   &__description {
-    margin-top:    4px;
+    margin-top: 4px;
     margin-bottom: 14px;
   }
 

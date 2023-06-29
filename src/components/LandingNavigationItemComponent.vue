@@ -1,8 +1,8 @@
 <template>
-  <section class="nav-item" :class="renderData.bg">
+  <section class="nav-item" :style='`background-image: url(${renderData["background-image"]})`'>
     <div class="nav-item__title secondary-font fz-40">{{ renderData.title }}</div>
-    <div class="nav-item__description fz-16">{{ renderData.subtitle }}</div>
-    <MainButtonComponent color='brand' :title='renderData.textBtn' @click='$router.push(renderData.route)'>
+    <div class="nav-item__description fz-16">{{ renderData.text }}</div>
+    <MainButtonComponent color='brand' :title='renderData.title' @click='$router.push(renderData.path)'>
       <template #prepend>
         <img src="@/assets/image/icons/paper-plane.svg" alt="icon">
       </template>
@@ -24,6 +24,7 @@ export default {
       default: () => ({}),
     }
   },
+
 }
 </script>
 
@@ -43,14 +44,6 @@ export default {
   justify-content: flex-end;
   align-items: center;
   transition: background-size .3s ease-in-out;
-
-  &.flights {
-     background-image: url('@/assets/image/photo-dis/bg-flights.png');
-  }
-
-  &.hotels {
-     background-image: url('@/assets/image/photo-dis/bg-hotels.png');
-  }
 
   &:hover {
     background-size: 110% 110%;

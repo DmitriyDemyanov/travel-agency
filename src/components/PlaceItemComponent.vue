@@ -1,12 +1,12 @@
 <template>
   <section class='place d-flex align-items-center'>
-    <div class="place__image"><img :src="require(`@/assets/image/photo-dis/${card.img}.png`)" alt="photo"></div>
+    <div class="place__image"><img :src="card.image" alt="photo"></div>
     <div class="place__content">
       <div class="place__title fz-16 font-color-7"> {{ card.city }}, {{ card.country }} </div>
       <span class='place__links fz-14'>
-        <a :href="card.links.flights" target="_blank">Flights</a> •
-        <a :href="card.links.hotels" target="_blank">Hotels</a> •
-        <a :href="card.links.resorts" target="_blank">Resorts</a>
+        <a href="#" target="_blank">Flights</a> •
+        <a href="#" target="_blank">Hotels</a> •
+        <a href="#" target="_blank">Resorts</a>
       </span>
     </div>
   </section>
@@ -54,6 +54,7 @@ export default {
     a {
       margin-right: 8px;
       margin-left: 8px;
+
       &:first-child {
         margin-left: 0;
       }
