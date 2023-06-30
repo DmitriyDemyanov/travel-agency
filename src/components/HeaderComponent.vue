@@ -22,9 +22,9 @@
 
     </div>
     <div class="logo-home">
-      <a v-if="isSticked" href="#"><img src="@/assets/image/icons/logo-brand.svg" alt="logo"></a>
+      <router-link v-if="isSticked" to='/'><img src="@/assets/image/icons/logo-brand.svg" alt="logo"></router-link>
 
-      <a v-else href="#"><img src="@/assets/image/icons/logo-light.svg" alt="logo"></a>
+      <router-link v-else to='/'><img src="@/assets/image/icons/logo-light.svg" alt="logo"></router-link>
 
 
     </div>
@@ -46,11 +46,11 @@ export default {
   name: 'HeaderComponent',
   components: {
     MainButtonComponent,
-   
+
   },
   data() {
     return {
-      isSticked: false
+      isSticked: true,
     }
   },
   computed: {
@@ -67,9 +67,18 @@ export default {
   unmounted() {
     window.removeEventListener('scroll',this.handleScroll);
   },
+  mounted() {
+    if (this.$route.name === 'home') {
+      this.isSticked = false
+    }
+  },
+
   methods: {
     handleScroll() {
-      this.isSticked = window.scrollY > 100;
+      if (this.$route.name === 'home') {
+        this.isSticked = window.scrollY > 100;
+      }
+
     },
     userLogin() {
       console.log('User Login');
