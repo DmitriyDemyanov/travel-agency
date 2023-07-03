@@ -1,8 +1,8 @@
 <template>
-  <section class="order container-normal">
+  <section :style='customStyle' class="order container-normal">
     <div class="d-flex ">
-
-      <div class="order__tab" @click="currentForm = 'FormFlightsComponent'">
+      <div v-show="$route.name === 'flights'" class="fz-20">Where are you flying? </div>
+      <div v-show='$route.name === "home"' class="order__tab" @click="currentForm = 'FormFlightsComponent'">
         <div class="d-flex align-items-center ">
           <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -14,7 +14,7 @@
         <div class="active__bar" v-show="currentForm === 'FormFlightsComponent'"></div>
       </div>
 
-      <div class="order__tab" @click="currentForm = 'FormHotelsComponent'">
+      <div v-show='$route.name === "home"' class="order__tab" @click="currentForm = 'FormHotelsComponent'">
         <div class="d-flex align-items-center ">
           <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -47,7 +47,10 @@ export default {
       currentForm: 'FormFlightsComponent'
     }
   },
-  methods: {
+  computed: {
+    customStyle() {
+      return this.$route.name === 'flights' ? 'padding: 32px 24px 48px 24px; bottom: -196px' : '';
+    }
   }
 }
 </script>
@@ -58,7 +61,7 @@ export default {
   bottom: -185px;
   right: 0;
   left: 0;
-  min-height: 280px;
+  min-height: 272px;
   background-color: #FFFFFF;
   box-shadow: 0 4px 8px rgba(141, 211, 187, 0.35);
   border-radius: 16px;

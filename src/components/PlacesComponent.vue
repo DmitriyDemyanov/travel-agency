@@ -1,6 +1,9 @@
 <template>
   <section class='places container-normal'>
-    <SectionHeaderComponent :sectionContent='{title: "Plan your perfect trip",subtitle: "Search Flights & Places Hire to our most popular destinations",textBtn: "See more places"}' />
+    <div class="places__content">
+      <SectionHeaderComponent
+        :sectionContent='{ title: "Plan your perfect trip",subtitle: "Search Flights & Places Hire to our most popular destinations",textBtn: "See more places" }' />
+    </div>
     <div class="places__cards">
       <PlaceItemComponent v-for="(item,ind) in getPlaces" :key='ind' :card='item' />
     </div>
@@ -22,13 +25,17 @@ export default {
   computed: {
     ...mapGetters('globalContent',['getPlaces'])
   },
- 
+
 }
 </script>
 
 <style lang='scss' scoped>
 .places {
   padding: 80px 0;
+
+  &__content {
+    margin-bottom: 40px;
+  }
 
   &__cards {
     display: grid;
