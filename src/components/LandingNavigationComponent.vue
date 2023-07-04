@@ -1,7 +1,7 @@
 <template>
   <section class="landing-nav container-normal">
 
-    <LandingNavigationItemComponent v-for='(el,ind) in getLandingNavigations' :key='ind' :renderData='el' />
+    <LandingNavigationItemComponent v-for='(el,ind) in getLandingNavigation' :key='ind' :renderData='el' />
 
   </section>
 </template>
@@ -16,7 +16,7 @@ export default {
     LandingNavigationItemComponent,
   },
   computed: {
-    ...mapGetters('globalContent', ['getLandingNavigations'])
+    ...mapGetters('globalContent',['getLandingNavigation'])
   },
 }
 </script>

@@ -18,6 +18,7 @@ import PlacesComponent from '@/components/PlacesComponent';
 import LandingNavigationComponent from '@/components/LandingNavigationComponent';
 
 import ReviewsComponent from '@/components/ReviewsComponent';
+import { mapActions } from 'vuex';
 
 export default {
   name: 'HomePage',
@@ -26,7 +27,16 @@ export default {
     PlacesComponent,
     LandingNavigationComponent,
     ReviewsComponent,
+  },
+  methods: {
+    ...mapActions('globalContent',['fetchLandingNavigation','fetchPlaces','fetchReviews'])
+  },
+  mounted() {
+    this.fetchLandingNavigation();
+    this.fetchPlaces();
+    this.fetchReviews();
   }
+
 }
 </script>
 

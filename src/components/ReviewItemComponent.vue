@@ -2,7 +2,7 @@
   <section class="review">
 
     <div class="review__title secondary-font fz-24">{{ card.title }}</div>
-    <div :class='actionSubtitle' class="review__subtitle fz-14 font-color-5"> {{ card.subtitle }}</div>
+    <div class="review__subtitle fz-14 font-color-5" :class='actionSubtitle'> {{ card.review }}</div>
 
     <div class="review__link secondary-font fz-16" @click='seeMore'>View more</div>
 
@@ -13,17 +13,16 @@
       </div>
     </div>
 
-    <div class="secondary-font fz-14">{{ card.userName }}</div>
-    <div class="review__description fz-12 font-color-5">{{ card.userDescription }}</div>
+    <div class="secondary-font fz-14">{{ card.user }}</div>
+    <div class="review__description fz-12 font-color-5">{{ card.subject }}</div>
 
     <div>
-      <img :src="require(`@/assets/image/icons/${card.icon}.svg`)" alt="">
-      <span class="icon-text secondary-font fz-12 font-color-4">{{ card.iconName }}</span>
+      <img :src="require(`@/assets/image/icons/icon-google.svg`)" alt="icon">
+      <span class="icon-text secondary-font fz-12 font-color-4">Google</span>
     </div>
 
     <div class="review__photo">
-      <a :href="card.link" target="_blank"><img :src="require(`@/assets/image/photo-dis/${card.image}.png`)"
-          alt="photo"></a>
+      <a :href="card.link" target="_blank"><img :src="card.image" alt="photo"></a>
     </div>
 
   </section>

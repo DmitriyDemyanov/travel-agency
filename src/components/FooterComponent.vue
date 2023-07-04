@@ -1,5 +1,6 @@
 <template>
   <section class="footer">
+
     <div class="footer__content container-normal">
       <div class="social">
         <a class="footer__logo" href="#">
@@ -11,10 +12,12 @@
           </a>
         </div>
       </div>
-      <FooterMenuComponent :links='el' v-for="(el,ind) in getFooterLinks" :key='ind' />
+      <FooterMenuComponent :links='el' v-for="(el,ind) in getFooterLinks" :key='ind' v-show="getFooterLinks" />
+      <div v-show="!getFooterLinks.length"> {{ getErrorMessage }} </div>
     </div>
+
     <SiteSubscribeComponent />
-   
+
   </section>
 </template>
 
@@ -32,8 +35,9 @@ export default {
     ...mapGetters("globalContent",[
       'getSocialMedia',
       'getFooterLinks',
+      'getErrorMessage',
     ])
-  }
+  },
 };
 </script>
 

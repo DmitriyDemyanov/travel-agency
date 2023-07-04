@@ -16,4 +16,13 @@ export default {
   getReviewsItems(state) {
     return state.reviewsItems
   },
+  //______________________________________errorMessage
+  getErrorMessage(state) {
+    return state.errorMessage
+  },
+  //______________________________________landingNavigation
+  getLandingNavigation(state) {
+    return state.landingNavigation;
+  }
+
 }

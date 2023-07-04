@@ -1,9 +1,11 @@
 <template>
   <div class="footer__navigation">
     <div class="footer__navigation_title  title-ff fz-16">{{ links.title }}</div>
-    <a :href="el.link" class="footer__navigation_link font-color-7  fz-14" v-for="(el,ind) in links.links" :key='ind'>
-      {{ el.textLink }}
-    </a>
+    <router-link v-for="(el,ind) in links.items" :key='ind' :to='el.path'
+      class="footer__navigation_link font-color-7 fz-14"
+    >
+      {{ el.text }}
+    </router-link>
   </div>
 </template>
 
@@ -31,6 +33,5 @@ export default {
   &_link {
     padding: 6px 0;
   }
-
 }
 </style>
