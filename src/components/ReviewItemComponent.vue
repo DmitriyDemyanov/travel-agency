@@ -2,9 +2,10 @@
   <section class="review">
 
     <div class="review__title secondary-font fz-24">{{ card.title }}</div>
-    <div class="review__subtitle fz-14 font-color-5"> {{ card.review }}</div>
+    <div class="review__subtitle fz-14 font-color-5" :class='actionSubtitle'> {{ card.review }}</div>
 
-    <a :href="card.link" target="_blank" class="review__link secondary-font fz-16">View more</a>
+    <div class="review__link secondary-font fz-16" @click='seeMore'>View more</div>
+
 
     <div class="review__stars d-flex">
       <div class="star" v-for="ind in Number(card.rating)" :key='ind'>
@@ -30,12 +31,28 @@
 <script>
 export default {
   name: "ReviewItemComponent",
+  data() {
+    return {
+      actionSubtitle: '',
+    }
+  },
   props: {
     card: {
       type: Object,
       required: true
     }
-  }
+  },
+  methods: {
+    seeMore() {
+      if (this.actionSubtitle === '') {
+        this.actionSubtitle = 'subtitle_action'
+      }
+      else if (this.actionSubtitle === 'subtitle_action') {
+        this.actionSubtitle = ''
+      }
+    },
+  },
+
 };
 </script>
 
@@ -43,7 +60,7 @@ export default {
 .review {
   position: relative;
   min-width: 425px;
-  height: 584px;
+  min-height: 584px;
   margin-right: 50px;
   padding: 24px;
   background: #FFFFFF;
@@ -67,6 +84,12 @@ export default {
     display: block;
     text-align: end;
     margin-bottom: 18px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      color: var(--accent-color);
+    }
   }
 
   &__stars {
@@ -96,6 +119,10 @@ export default {
 
   .icon-text {
     margin-left: 13px;
+  }
+
+  .subtitle_action {
+    -webkit-line-clamp: inherit;
   }
 }
 </style>
