@@ -9,7 +9,6 @@
 <script>
 import { mapActions } from 'vuex';
 
-
 import HeaderComponent from '@/components/HeaderComponent';
 import FooterComponent from '@/components/FooterComponent';
 
@@ -25,7 +24,6 @@ export default {
   mounted() {
     this.fetchFooterLinks();
   }
-
 }
 </script>
 

@@ -1,9 +1,9 @@
-
+const CONTENT_URL = "http://localhost:3579/content/";
 
 export default {
-  async fetchFooterLinks({ commit,}) {
+  async fetchFooterLinks({ commit }) {
     try {
-      const response = await fetch('http://localhost:3579/content/footer/links');
+      const response = await fetch(`${CONTENT_URL}footer/links`);
       const footerLinks = await response.json();
       commit('FOOTER_LINKS',footerLinks);
     } catch (err) {
@@ -12,23 +12,20 @@ export default {
   },
 
   async fetchLandingNavigation({ commit }) {
-    const response = await fetch('http://localhost:3579/content/landing/navigations');
+    const response = await fetch(`${CONTENT_URL}landing/navigations`);
     const landingNavigation = await response.json()
     commit('LANDING_NAVIGATION',landingNavigation)
   },
 
   async fetchPlaces({ commit }) {
-    const response = await fetch('http://localhost:3579/content/landing/places');
+    const response = await fetch(`${CONTENT_URL}landing/places`);
     const places = await response.json();
     commit('PLACES_ITEM',places);
   },
+
   async fetchReviews({ commit }) {
-    const response = await fetch('http://localhost:3579/content/reviews');
+    const response = await fetch(`${CONTENT_URL}reviews`);
     const reviews = await response.json();
     commit('REVIEWS_ITEM',reviews);
-    console.log('review',reviews)
   }
-
-
-
-}  
+}

@@ -1,5 +1,6 @@
 <template>
   <section class="footer">
+
     <div class="footer__content container-normal">
       <div class="social">
         <a class="footer__logo" href="#">
@@ -14,6 +15,7 @@
       <FooterMenuComponent :links='el' v-for="(el,ind) in getFooterLinks" :key='ind' v-show="getFooterLinks" />
       <div v-show="!getFooterLinks.length"> {{ getErrorMessage }} </div>
     </div>
+
     <SiteSubscribeComponent />
 
   </section>
