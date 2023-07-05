@@ -1,7 +1,7 @@
 <template>
   <section class="places">
     <SectionHeaderComponent
-      :sectionContent='{ title: "Lets go places together",subtitle: "Discover the latest offers and news and start planning your next trip with us.",textBtn: "See All",color: "color" }' />
+      :sectionContent='{ title: "Let’s go places together",subtitle: "Discover the latest offers and news and start planning your next trip with us.",textBtn: "See All",subtitleColor: "subtitle-color" }' />
     <div class="places__bg"></div>
   </section>
 </template>

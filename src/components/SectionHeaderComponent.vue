@@ -1,9 +1,9 @@
 <template>
   <section class="container-normal">
     <div class='section__wrapper d-flex justify-content-between align-items-center'>
-      <div class='section__wrapper'>
+      <div :style='sectionContent.subtitleWidth' class='section__wrapper'>
         <div class='section__title fz-32'>{{ sectionContent.title }}</div>
-        <div :class='sectionContent.color' class='fz-16 font-color-7'>{{ sectionContent.subtitle }}</div>
+        <div :class='sectionContent.subtitleColor' class='fz-16 font-color-7'>{{ sectionContent.subtitle }}</div>
       </div>
       <MainButtonComponent :title='sectionContent.textBtn' type='bordered' :customStyle='{ height: "40px" }'
         @click='showMorePlaces' />
@@ -43,7 +43,7 @@ export default {
   }
 }
 
-.color {
+.subtitle-color {
   opacity: 1;
 }
 </style>

@@ -7,8 +7,8 @@
       </div>
       <QuickOrderComponent />
     </div>
-
     <GoTogetherComponent />
+    <CountriesForTravel />
 
   </section>
 </template>
@@ -16,11 +16,13 @@
 <script>
 import QuickOrderComponent from '@/components/QuickOrderComponent';
 import GoTogetherComponent from '@/components/GoTogetherComponent';
+import CountriesForTravel from '@/components/CountriesForTravel';
 export default {
   name: 'FlightsSearchPage',
   components: {
     QuickOrderComponent,
     GoTogetherComponent,
+    CountriesForTravel,
   },
 }
 </script>
