@@ -258,6 +258,37 @@ export default {
       image: 'nature-3',
     },
   ],
+  //_____________________________________flight-page ///  country-card
+  countryCards: [
+    {
+      title: 'Melbourne',
+      subtitle: 'An amazing journey',
+      price: '700',
+      currency: '₴',
+      'bg': 'melbourne'
+    },
+    {
+      title: 'Paris',
+      subtitle: 'A Paris Adventure',
+      price: '600',
+      currency: '$',
+      'bg': 'paris'
+    },
+    {
+      title: 'london',
+      subtitle: 'London eye adventure',
+      price: '350',
+      currency: '₴',
+      'bg': 'london'
+    },
+    {
+      title: 'Columbia',
+      subtitle: 'Amazing streets',
+      price: '800',
+      currency: '$',
+      'bg': 'columbia'
+    },
+  ],
 }
 
 

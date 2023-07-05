@@ -3,7 +3,7 @@
     <SectionHeaderComponent
       :sectionContent='{ title: " Fall into travel",subtitle: "Going somewhere to celebrate this season? Whether you’re going home or somewhere to roam, we’ve got the travel tools to get you to your destination.",textBtn: "See All",subtitleColor: "subtitle-color",subtitleWidth: "width: 91%" }' />
     <div class="travel__cards">
-      <CountryItemCardComponent />
+      <CountryItemCardComponent v-for="(el, ind) in getCountryCards" :key='ind' :card='el' />
     </div>
   </section>
 </template>
@@ -11,12 +11,16 @@
 <script>
 import SectionHeaderComponent from "@/components/SectionHeaderComponent";
 import CountryItemCardComponent from "@/components/CountryItemCardComponent";
+import { mapGetters } from 'vuex';
 export default {
   name: 'CountriesForTravel',
   components: {
     SectionHeaderComponent,
     CountryItemCardComponent,
   },
+  computed: {
+    ...mapGetters('globalContent',['getCountryCards']),
+  }
 }
 </script>
 

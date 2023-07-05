@@ -16,4 +16,8 @@ export default {
   getReviewsItems(state) {
     return state.reviewsItems
   },
-}
+  //_______________________________page-flight country-cards
+  getCountryCards(state) {
+    return state.countryCards;
+  }
+ }
