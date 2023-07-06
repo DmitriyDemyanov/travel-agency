@@ -289,6 +289,8 @@ export default {
       'bg': 'columbia'
     },
   ],
+  //________________________tourism-photo
+  tourismPhoto: ['1','2','3','4']
 }
 
 

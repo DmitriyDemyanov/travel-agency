@@ -1,5 +1,6 @@
 <template>
-  <section :style='`background-image: url (../assets/image/photo/photo-countries/paris.png)`' class="card">
+  <section :style='`background-image: url(${require("@/assets/image/photo/photo-countries/" + card.bg + ".png")})`'
+    class="card">
     <div class="card__content d-flex align-items-end justify-content-between">
       <div>
         <div class="fz-24">{{ card.title }}</div>
@@ -35,8 +36,8 @@ export default {
 <style lang='scss' scoped>
 .card {
   padding: 0 24px 24px 24px;
-  background-image: url('@/assets/image/photo/photo-countries/london.png');
   border-radius: 12px;
+  border: none;
   color: #fff;
   display: flex;
   flex-direction: column;

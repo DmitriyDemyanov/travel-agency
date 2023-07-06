@@ -1,9 +1,9 @@
 <template>
   <section class="travel container-normal">
     <SectionHeaderComponent
-      :sectionContent='{ title: " Fall into travel",subtitle: "Going somewhere to celebrate this season? Whether you’re going home or somewhere to roam, we’ve got the travel tools to get you to your destination.",textBtn: "See All",subtitleColor: "subtitle-color",subtitleWidth: "width: 91%" }' />
+      :sectionContent='{ title: " Fall into travel",subtitle: "Going somewhere to celebrate this season? Whether you’re going home or somewhere to roam, we’ve got the travel tools to get you to your destination.",textBtn: "See All",subtitleColor: "subtitle-color",subtitleWidth: "width: 70%" }' />
     <div class="travel__cards">
-      <CountryItemCardComponent v-for="(el, ind) in getCountryCards" :key='ind' :card='el' />
+      <CountryItemCardComponent v-for="(el,ind) in getCountryCards" :key='ind' :card='el' />
     </div>
   </section>
 </template>

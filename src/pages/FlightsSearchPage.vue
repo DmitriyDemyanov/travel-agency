@@ -9,7 +9,7 @@
     </div>
     <GoTogetherComponent />
     <CountriesForTravel />
-
+    <TourismCityComponent />
   </section>
 </template>
 
@@ -17,12 +17,14 @@
 import QuickOrderComponent from '@/components/QuickOrderComponent';
 import GoTogetherComponent from '@/components/GoTogetherComponent';
 import CountriesForTravel from '@/components/CountriesForTravel';
+import TourismCityComponent from "@/components/TourismCityComponent";
 export default {
   name: 'FlightsSearchPage',
   components: {
     QuickOrderComponent,
     GoTogetherComponent,
     CountriesForTravel,
+    TourismCityComponent,
   },
 }
 </script>

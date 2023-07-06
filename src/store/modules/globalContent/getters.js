@@ -19,5 +19,8 @@ export default {
   //_______________________________page-flight country-cards
   getCountryCards(state) {
     return state.countryCards;
+  },
+  getTourismPhoto(state) {
+    return state.tourismPhoto;
   }
- }
+}

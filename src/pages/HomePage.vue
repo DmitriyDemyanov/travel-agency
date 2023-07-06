@@ -9,6 +9,7 @@
     <PlacesComponent />
     <LandingNavigationComponent />
     <ReviewsComponent />
+    
   </section>
 </template>
 
@@ -16,8 +17,8 @@
 import QuickOrderComponent from '@/components/QuickOrderComponent';
 import PlacesComponent from '@/components/PlacesComponent';
 import LandingNavigationComponent from '@/components/LandingNavigationComponent';
-
 import ReviewsComponent from '@/components/ReviewsComponent';
+
 
 export default {
   name: 'HomePage',
@@ -26,7 +27,8 @@ export default {
     PlacesComponent,
     LandingNavigationComponent,
     ReviewsComponent,
-  }
+   
+  },
 }
 </script>
 
