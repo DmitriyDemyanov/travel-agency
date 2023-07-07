@@ -20,7 +20,7 @@
 
 
         <div class="test">
-          <MainButtonComponent title='Book Flight' size='full' color='light' />
+          <MainButtonComponent title='Book Flight' size='full' color='light' @click='showCity' />
         </div>
       </div>
       <div class="tourism__photo">
@@ -43,6 +43,11 @@ export default {
   },
   computed: {
     ...mapGetters('globalContent',['getTourismPhoto'])
+  },
+  methods: {
+    showCity() {
+      console.log('choice city');
+    }
   }
 }
 </script>

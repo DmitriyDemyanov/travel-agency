@@ -17,7 +17,7 @@ import MainButtonComponent from '@/components/MainButtonComponent'
 export default {
   name: 'CountryItemCardComponent',
   components: {
-    MainButtonComponent
+    MainButtonComponent,
   },
   props: {
     card: {
