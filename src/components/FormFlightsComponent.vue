@@ -2,37 +2,21 @@
   <section>
     <form class="form">
 
-      <MainInputComponent
-          placeholder='Select Places'
-          labelText='From - To'
-          v-model="order.fromTo"
-      >
+      <MainInputComponent placeholder='Select Places' labelText='From - To' v-model="order.fromTo">
         <template #append>
           <img src="@/assets/image/icons/arrows-right-left.svg" alt="icon">
         </template>
       </MainInputComponent>
 
-      <MainInputComponent
-          placeholder='Return'
-          labelText='Trip'
-          v-model="order.trip"
-      >
+      <MainInputComponent placeholder='Return' labelText='Trip' v-model="order.trip">
         <template #append>
           <img src="@/assets/image/icons/chevron-down.svg" alt="icon">
         </template>
       </MainInputComponent>
 
-      <MainInputComponent
-          placeholder='Select Dates'
-          labelText='Depart - Return'
-          v-model="order.departReturn"
-      />
+      <MainInputComponent placeholder='Select Dates' labelText='Depart - Return' v-model="order.departReturn" />
 
-      <MainInputComponent
-          placeholder='Seats and Class'
-          labelText='Passenger - Class'
-          v-model="order.passengerClass"
-      />
+      <MainInputComponent placeholder='Seats and Class' labelText='Passenger - Class' v-model="order.passengerClass" />
     </form>
 
     <div class="form__buttons">
@@ -42,12 +26,12 @@
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M8 3.5V12.5V3.5ZM12.5 8H3.5H12.5Z" fill="#112211" />
             <path d="M8 3.5V12.5M12.5 8H3.5" stroke="#112211" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
+              stroke-linejoin="round" />
           </svg>
         </template>
       </MainButtonComponent>
 
-      <MainButtonComponent title='Show Flights'>
+      <MainButtonComponent title='Show Flights' @click="saveOrder">
         <template #prepend>
           <img src="@/assets/image/icons/paper-plane.svg" alt="icon">
         </template>
@@ -57,7 +41,7 @@
   </section>
 </template>
 <script>
-import MainInputComponent  from "@/components/MainInputComponent";
+import MainInputComponent from "@/components/MainInputComponent";
 import MainButtonComponent from "@/components/MainButtonComponent";
 
 export default {
@@ -74,6 +58,11 @@ export default {
         departReturn: '',
         passengerClass: '',
       }
+    }
+  },
+  methods: {
+    saveOrder() {
+      console.log(this.order)
     }
   }
 };

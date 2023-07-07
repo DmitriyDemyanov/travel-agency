@@ -70,7 +70,8 @@ export default {
         roomsAndGuests: '',
       }
     }
-  }
+  },
+  
 };
 </script>
 <style lang="scss" scoped>

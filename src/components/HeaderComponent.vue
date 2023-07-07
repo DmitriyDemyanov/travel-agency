@@ -11,6 +11,7 @@
         </svg>
         <div class="link-text fz-14">Find Flight</div>
       </div>
+      <div v-show="$route.name === 'flights'" class="flight-bar"></div>
       <div class="navigation__link">
         <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -19,7 +20,7 @@
         </svg>
         <div class="link-text fz-14">Find Stays</div>
       </div>
-
+      <div v-show="$route.name === 'hotels'" class="stays-bar"></div>
     </div>
     <div class="logo-home">
       <router-link v-if="isSticked" to='/'><img src="@/assets/image/icons/logo-brand.svg" alt="logo"></router-link>
@@ -123,6 +124,13 @@ export default {
     display: flex;
     align-items: center;
 
+    /* &::after {
+      content: '';
+      width: 107px;
+      height: 5px;
+      background-color: var(--brand-color);
+    } */
+
     .link-text {
       padding: 0 10px 0 5px;
     }
@@ -145,5 +153,23 @@ export default {
       margin-right: 0;
     }
   }
+}
+
+.flight-bar {
+  width: 107px;
+  height: 5px;
+  background-color: var(--brand-color);
+  position: absolute;
+  bottom: 0;
+  left: 60px;
+}
+
+.stays-bar {
+  width: 103px;
+  height: 5px;
+  background-color: var(--brand-color);
+  position: absolute;
+  bottom: 0;
+  left: 200px;
 }
 </style>
