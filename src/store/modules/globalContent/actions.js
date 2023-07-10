@@ -27,5 +27,11 @@ export default {
     const response = await fetch(`${CONTENT_URL}reviews`);
     const reviews = await response.json();
     commit('REVIEWS_ITEM',reviews);
-  }
+  },
+  saveSendFormTest({commit}, payload) {
+    commit('SAVE_SEND_FORM_TEST', payload)
+  },
+  saveErrorMessage({ commit },payload) {
+    commit('SAVE_ERROR_MESSAGE',payload);
+  },
 }

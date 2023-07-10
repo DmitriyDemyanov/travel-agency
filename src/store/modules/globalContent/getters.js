@@ -23,6 +23,7 @@ export default {
   //______________________________________landingNavigation
   getLandingNavigation(state) {
     return state.landingNavigation;
-  }
+  },
+  
 
 }
