@@ -29,4 +29,6 @@ export default {
   places: [],
   //______________________________________Reviews-component
   reviewsItems: [],
+  //_____________________________________formFlightComponent
+  sendFormTest: {},
 }
