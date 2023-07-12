@@ -2,6 +2,7 @@ import VueRouter from "vue-router";
 import Vue from "vue";
 
 import HomePage from '@/pages/HomePage';
+import HotelsSearchPage from '@/pages/HotelsSearchPage';
 
 Vue.use(VueRouter);
 
@@ -19,7 +20,7 @@ const routes = [
   {
     path: "/hotels",
     name: "hotels",
-    component: HomePage,
+    component: HotelsSearchPage,
   },
 ];
 
