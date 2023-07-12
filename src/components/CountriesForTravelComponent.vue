@@ -13,7 +13,7 @@ import SectionHeaderComponent from "@/components/SectionHeaderComponent";
 import CountryItemCardComponent from "@/components/CountryItemCardComponent";
 import { mapGetters } from 'vuex';
 export default {
-  name: 'CountriesForTravel',
+  name: 'CountriesForTravelComponent',
   components: {
     SectionHeaderComponent,
     CountryItemCardComponent,
